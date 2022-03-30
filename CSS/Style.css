@@ -102,6 +102,7 @@ nav{
     border-radius: 300px;
 }
 
+<<<<<<< HEAD:CSS/Style.css
 .card h5{
     text-align: center;
     font-weight:bold;
@@ -206,6 +207,14 @@ nav{
 
 
  @media screen and (min-width: 800px){
+=======
+<<<<<<< HEAD
+
+ @media screen and (min-width: 800px){
+=======
+@media screen and (min-width: 768px){
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
+>>>>>>> fa69b563b3cedf1dff2d7eafc4796b6b3dd3c55c:Style.css
     
     nav{
         height: 100px;
@@ -227,6 +236,45 @@ nav{
         line-height: 100px;
         margin: 0 20px;
     }
+<<<<<<< HEAD:CSS/Style.css
+    #check:checked ~ .nav-menu li{
+        display: inline-block;
+    }
+=======
+<<<<<<< HEAD
+    #check:checked ~ .nav-menu li{
+        display: inline-block;
+    }
+=======
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
+>>>>>>> fa69b563b3cedf1dff2d7eafc4796b6b3dd3c55c:Style.css
+    .nav-menu li a:hover{
+        background: #d9ff00;
+        border-radius: 100px;
+    }
+<<<<<<< HEAD:CSS/Style.css
+}  
+=======
+<<<<<<< HEAD
+}  
+/* 
+@media screen and (min-width: 768px){
+    
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: fixed;
+        height: 100px;
+        top: 0%;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
     #check:checked ~ .nav-menu li{
         display: inline-block;
     }
@@ -234,4 +282,22 @@ nav{
         background: #d9ff00;
         border-radius: 100px;
     }
-}  
+}  */
+
+.card h5{
+    text-align: center;
+}
+
+.card-text{
+    text-align:center;
+}
+.card{
+    border-radius: 90px 90px;
+}
+=======
+}
+    
+
+
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
+>>>>>>> fa69b563b3cedf1dff2d7eafc4796b6b3dd3c55c:Style.css
