@@ -1,52 +1,135 @@
-*{margin: 0; padding: 0;}
+*{  margin: 0; 
+    padding: 0;
+    list-style: none;
+    text-decoration:none;
+    box-sizing: border-box;
+}
 body {
-    background: #ffffff;;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.wrapper {
+    width: 100% ;
+    max-width: 1200px;
+    margin: auto;
+    overflow:hidden;
+    
+}
+
+main{
+    padding-top: 120px;
 }
 
 header {
     width:100%;
-    height: auto;
-    overflow: hidden;
+    height: 100px;
+    overflow:visible;
     background: #17b8d8;
     margin-bottom: 20px;
+    box-shadow: 1px 1px 5px #000;
+    position:fixed;
+    z-index: 1001;
 }
 
-.wrapper {
-    width: 90% ;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
+#titulos{
+    padding-top: 15px;
 }
 
-header .logo {
-    color: #f2f2f2;
-    font-size: 50px;
-    line-height: 200px;
+.logo {
+    height: 100px;
     float: left;
 }
 
-header nav{
-    float: right;
-    line-height: 200px;
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-decoration: none;
-    padding: 10px 10px;
-    line-height: normal;
-    font-size: 20px;
+.bar-btn{
+    font-size: 40px;
+    color: #000000;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    position:fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background-color:#17b8d8;
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;  
+}
+
+.nav-menu li a {
+    color: #141313;
+    text-transform:capitalize;
+    text-decoration:none;
     font-weight: bolder;
+    font-size: 20px;
+    font-weight:bolder;
+    padding: 10px 10px;
+}
+
+
+
+#check {
+
+    display: none ;
+}
+
+#check:checked ~ .nav-menu{
+    height: 50vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+.nav-menu li a:hover{
+    background: #d9ff00;
+    border-radius: 300px;
+}
+
+@media screen and (min-width: 768px){
     
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: fixed;
+        height: 100px;
+        top: 0%;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+    }
+    .nav-menu li a:hover{
+        background: #d9ff00;
+        border-radius: 100px;
+    }
 }
-
-header nav a:hover {
-    background: #fc4903;
-    border-radius: 50px;
-}
-
-
-
+    
 
 
