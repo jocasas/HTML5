@@ -32,7 +32,7 @@ header {
     z-index: 1001;
 }
 
-#titulos{
+.titulos{
     padding-top: 15px;
     margin-top: 15px;
 }
@@ -217,17 +217,16 @@ nav{
 
 
 #fom{
-    width: 40% auto;
+    width: 40% ;
     margin: 40px auto;
     background-color: rgb(125, 219, 211);
-    position: flex;
     display: inline-block;
     border-radius: 20px;
 
 }
 
 #fom2{
-    width: 40% auto;
+    width: 40% ;
     margin: 40px auto;
     background-color: rgb(125, 219, 211);
     display: inline-block;
@@ -236,7 +235,12 @@ nav{
 
 #btn{
     width: 100%;
-    padding: auto;
+
+}
+
+#btn2{
+    width: 100%;
+
 }
 
 hr:not([size]) {
