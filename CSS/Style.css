@@ -32,7 +32,7 @@ header {
     z-index: 1001;
 }
 
-#titulos{
+.titulos{
     padding-top: 15px;
     margin-top: 15px;
 }
@@ -132,7 +132,7 @@ nav{
 }
 
 .formulario{
-    background-color:#fafafa;
+    background-color:#f8f9fa;
     width: 100%;
     margin: auto;
     padding-bottom: 10px;
@@ -203,6 +203,55 @@ nav{
 .needs-validation{
     text-align: center;
 }
+.botonregistro button{
+    width: 20%;
+    margin: 10px auto;
+    background-color: #0d6efd;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#fom{
+    width: 40% ;
+    margin: 40px auto;
+    background-color: rgb(125, 219, 211);
+    display: inline-block;
+    border-radius: 20px;
+
+}
+
+#fom2{
+    width: 40% ;
+    margin: 40px auto;
+    background-color: rgb(125, 219, 211);
+    display: inline-block;
+    border-radius: 20px;
+}
+
+#btn{
+    width: 100%;
+
+}
+
+#btn2{
+    width: 100%;
+
+}
+
+hr:not([size]) {
+    height: 1px;
+    margin: 0;
+}
+
+#formfooter .row{
+    display: flex;
+    justify-content: center;
+}
 
 
  @media screen and (min-width: 800px){
@@ -234,26 +283,7 @@ nav{
         background: #d9ff00;
         border-radius: 100px;
     }
-}  
-
-#fom{
-    width: 40% auto;
-    margin: 40px auto;
-    background-color: rgb(125, 219, 211);
-    position: flex;
-    display: inline-block;
-
 }
 
-#fom2{
-    width: 40% auto;
-    margin: 40px auto;
-    background-color: rgb(125, 219, 211);
-    position: flex;
-    display: inline-block;
-}
 
-#btn{
-    width: 100%;
-    padding: auto;
-}
+
