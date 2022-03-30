@@ -1,33 +1,50 @@
 *{margin: 0; padding: 0;}
 body {
     background: #ffffff;;
+    
+}
+
+.wrapper {
+    width: 100% ;
+    max-width: 1200px;
+    margin: auto;
+    overflow:hidden;
+    
+}
+
+main{
+    padding-top: 120px;
 }
 
 header {
     width:100%;
-    height: auto;
-    overflow: hidden;
+    height: 100px;
+    overflow:visible;
     background: #17b8d8;
     margin-bottom: 20px;
+    box-shadow: 1px 1px 5px #000;
+    position:fixed;
+    z-index: 1001;
 }
 
-.wrapper {
-    width: 90% ;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
+#titulos{
+    padding-top: 15px;
 }
 
 header .logo {
     color: #f2f2f2;
-    font-size: 50px;
-    line-height: 200px;
+    font-size: 40px;
+    line-height: 100px;
     float: left;
+    
+    
+    
 }
 
 header nav{
     float: right;
-    line-height: 200px;
+    line-height: 100px;
+    
 }
 
 header nav a {
@@ -38,15 +55,10 @@ header nav a {
     line-height: normal;
     font-size: 20px;
     font-weight: bolder;
-    
 }
 
 header nav a:hover {
-    background: #fc4903;
+    background: #d9ff00;
     border-radius: 50px;
 }
-
-
-
-
 
