@@ -103,8 +103,12 @@ nav{
     border-radius: 300px;
 }
 
+<<<<<<< HEAD
 
  @media screen and (min-width: 800px){
+=======
+@media screen and (min-width: 768px){
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
     
     nav{
         height: 100px;
@@ -126,13 +130,17 @@ nav{
         line-height: 100px;
         margin: 0 20px;
     }
+<<<<<<< HEAD
     #check:checked ~ .nav-menu li{
         display: inline-block;
     }
+=======
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
     .nav-menu li a:hover{
         background: #d9ff00;
         border-radius: 100px;
     }
+<<<<<<< HEAD
 }  
 /* 
 @media screen and (min-width: 768px){
@@ -171,3 +179,9 @@ nav{
 .card{
     border-radius: 90px 90px;
 }
+=======
+}
+    
+
+
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
