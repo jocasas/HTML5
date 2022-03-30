@@ -217,7 +217,7 @@ nav{
 
 
 #fom{
-    width: 40% ;
+    width: 100%;
     margin: 40px auto;
     background-color: rgb(125, 219, 211);
     display: inline-block;
@@ -226,7 +226,7 @@ nav{
 }
 
 #fom2{
-    width: 40% ;
+    width: 100%;
     margin: 40px auto;
     background-color: rgb(125, 219, 211);
     display: inline-block;
