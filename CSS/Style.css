@@ -32,7 +32,11 @@ header {
     z-index: 1001;
 }
 
+<<<<<<< HEAD
 .titulos{
+=======
+#titulos{
+>>>>>>> 114310d60fa070120f6189c225dc3d162b3fb259
     padding-top: 15px;
     margin-top: 15px;
 }
@@ -102,6 +106,10 @@ nav{
     border-radius: 300px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:CSS/Style.css
+>>>>>>> 114310d60fa070120f6189c225dc3d162b3fb259
 .card h5{
     text-align: center;
     font-weight:bold;
@@ -132,7 +140,11 @@ nav{
 }
 
 .formulario{
+<<<<<<< HEAD
     background-color:#f8f9fa;
+=======
+    background-color:#fafafa;
+>>>>>>> 114310d60fa070120f6189c225dc3d162b3fb259
     width: 100%;
     margin: auto;
     padding-bottom: 10px;
@@ -203,6 +215,7 @@ nav{
 .needs-validation{
     text-align: center;
 }
+<<<<<<< HEAD
 .botonregistro button{
     width: 20%;
     margin: 10px auto;
@@ -255,6 +268,19 @@ hr:not([size]) {
 
 
  @media screen and (min-width: 800px){
+=======
+
+
+ @media screen and (min-width: 800px){
+=======
+<<<<<<< HEAD
+
+ @media screen and (min-width: 800px){
+=======
+@media screen and (min-width: 768px){
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
+>>>>>>> fa69b563b3cedf1dff2d7eafc4796b6b3dd3c55c:Style.css
+>>>>>>> 114310d60fa070120f6189c225dc3d162b3fb259
     
     nav{
         height: 100px;
@@ -276,6 +302,48 @@ hr:not([size]) {
         line-height: 100px;
         margin: 0 20px;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:CSS/Style.css
+    #check:checked ~ .nav-menu li{
+        display: inline-block;
+    }
+=======
+<<<<<<< HEAD
+    #check:checked ~ .nav-menu li{
+        display: inline-block;
+    }
+=======
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
+>>>>>>> fa69b563b3cedf1dff2d7eafc4796b6b3dd3c55c:Style.css
+    .nav-menu li a:hover{
+        background: #d9ff00;
+        border-radius: 100px;
+    }
+<<<<<<< HEAD:CSS/Style.css
+}  
+=======
+<<<<<<< HEAD
+}  
+/* 
+@media screen and (min-width: 768px){
+    
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: fixed;
+        height: 100px;
+        top: 0%;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+>>>>>>> 114310d60fa070120f6189c225dc3d162b3fb259
     #check:checked ~ .nav-menu li{
         display: inline-block;
     }
@@ -283,7 +351,29 @@ hr:not([size]) {
         background: #d9ff00;
         border-radius: 100px;
     }
+<<<<<<< HEAD
 }
 
 
 
+=======
+}  */
+
+.card h5{
+    text-align: center;
+}
+
+.card-text{
+    text-align:center;
+}
+.card{
+    border-radius: 90px 90px;
+}
+=======
+}
+    
+
+
+>>>>>>> 9f5438b44983d210c41531b1e39f236c435e49d5
+>>>>>>> fa69b563b3cedf1dff2d7eafc4796b6b3dd3c55c:Style.css
+>>>>>>> 114310d60fa070120f6189c225dc3d162b3fb259
