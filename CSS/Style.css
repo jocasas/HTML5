@@ -326,18 +326,26 @@ hr:not([size]) {
   align-items: center;
 }
 
-/*#regresar_login a {
+#regresar_login a {
   text-decoration: none;
   display:flex;
   position:absolute;
   color: #000;
-  font-size: 50px;
-  top: 0;
+  font-size: 30px;
+  top: 43%;
   left: 20px;
-}*/
+  background:none;
+  border: none;
+  
+}
 
-.registrarme_login {
-  padding-left: 60px;
+.registrarme_login p {
+  position: relative;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* CSS REGISTRO */
@@ -357,15 +365,17 @@ hr:not([size]) {
   align-items: center;
 }
 
-/*#regresar_registro a {
+#regresar_registro a {
   text-decoration: none;
   display:flex;
   position:absolute;
   color: #000;
-  font-size: 50px;
-  top: 0;
+  font-size: 30px;
+  top: 44.4%;
   left: 20px;
-}*/
+  background:none;
+  border: none;
+}
 
 @media screen and (min-width: 800px) {
   /* MENU RESPONSIVIDAD*/
@@ -399,7 +409,7 @@ hr:not([size]) {
 }
 
 @media screen and (max-width: 800px) {
-  /* LOGIN RESPONSIVIDAD*/
+  /* LOGIN Y REGISTRO RESPONSIVIDAD*/
 
   .contenedor_img {
     display: none;
@@ -486,17 +496,19 @@ hr:not([size]) {
     display: flex;
     position: absolute;
     color: #000;
-    font-size: 40px;
-    top: 0;
+    font-size: 30px;
+    top: 2%;
     left: 20px;
   }
 
-  .registrarme_login {
-    padding: 0;
-    display: block;
-    font-size: 10px;
-    align-items: center;
-    align-content: center;
+  #regresar_registro a {
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+    color: #000;
+    font-size: 30px;
+    top: 2%;
+    left: 20px;
   }
 
   .registrarme_login {
