@@ -33,9 +33,9 @@ header {
   z-index: 1001;
 }
 
-.titulos{
-    padding-top: 15px;
-    margin-top: 15px;
+.titulos {
+  padding-top: 15px;
+  margin-top: 15px;
 }
 
 .logo {
@@ -126,11 +126,16 @@ nav {
   height: 200px;
 }
 
-.formulario{
-    background-color:#f8f9fa;
-    width: 100%;
-    margin: auto;
-    padding-bottom: 10px;
+.card:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+.formulario {
+  background-color: #f8f9fa;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
 .formulario h3 {
@@ -529,91 +534,3 @@ hr:not([size]) {
   }
 
 }
-
-.needs-validation{
-    text-align: center;
-}
-.botonregistro button{
-    width: 20%;
-    margin: 10px auto;
-    background-color: #0d6efd;
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-#fom{
-    width: 100%;
-    margin: 40px auto;
-    background-color: rgb(125, 219, 211);
-    display: inline-block;
-    border-radius: 20px;
-
-}
-
-#fom2{
-    width: 100%;
-    margin: 40px auto;
-    background-color: rgb(125, 219, 211);
-    display: inline-block;
-    border-radius: 20px;
-}
-
-#btn{
-    width: 100%;
-
-}
-
-#btn2{
-    width: 100%;
-
-}
-
-hr:not([size]) {
-    height: 1px;
-    margin: 0;
-}
-
-#formfooter .row{
-    display: flex;
-    justify-content: center;
-}
-
-
- @media screen and (min-width: 800px){
-    
-    nav{
-        height: 100px;
-    }
-    .bar-btn{
-        display: none;
-    }
-    .nav-menu{
-        position: fixed;
-        height: 100px;
-        top: 0%;
-        background: none;
-        transition: none;
-        text-align: right;
-        margin-right: 50px;
-    }
-    .nav-menu li{
-        display: inline-block;
-        line-height: 100px;
-        margin: 0 20px;
-    }
-    #check:checked ~ .nav-menu li{
-        display: inline-block;
-    }
-    .nav-menu li a:hover{
-        background: #d9ff00;
-        border-radius: 100px;
-    }
-}
-
-
-
