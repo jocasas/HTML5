@@ -204,6 +204,35 @@ nav {
   text-align: center;
 }
 
+/*CSS FOOTER*/
+.fotercol1{
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.foter-red{
+  text-align: center;
+  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.foter-red p{
+  text-decoration: underline;
+}
+
+.fotercol2{
+  text-align: center;
+  margin-bottom: 5px;   
+}
+
+.fotercol3{
+  text-align: center;
+  height: 10px;
+  background-color: rgba(174, 184, 170, 0.28);
+  padding-bottom: 25px;
+}
+/*CSS FOOTE*/
+
 .botonregistro button {
   width: 20%;
   margin: 10px auto;
