@@ -14,3 +14,33 @@
         }, false)
       })
   })()
+
+$(document).ready(function () {
+      $("#btn-login").click(function (event) { 
+          var usuario = $("#usuario-login").val();
+          if (usuario ==  "") {
+              $("#error_usuario_log").fadeIn();
+              event.preventDefault();
+
+          } else {
+              $("#error_usuario_log").hide();
+
+          }
+          
+      });
+});
+
+$(document).ready(function () {
+  $("#btn-login").click(function (event) { 
+      var contrasenna = $("#contrasenna-login").val();
+      if (contrasenna ==  "") {
+          $("#error_contrasenna_log").fadeIn();
+          event.preventDefault();
+
+      } else {
+          $("#error_contrasenna_log").hide();
+
+      }
+      
+  });
+});
