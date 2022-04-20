@@ -582,3 +582,7 @@ hr:not([size]) {
 
 }
 
+#pikachu{
+  display:block;
+  margin:auto;
+}
