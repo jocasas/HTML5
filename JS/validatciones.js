@@ -15,6 +15,30 @@
       })
   })()
 
+//JS CARTAS DE PRODUCTOS
+
+$(document).ready(function () {
+  $(".card:first").hide()
+  $.ajax({
+      url: "/JSON/script.json",
+      success: function (result) {
+          $.each(result, function (index, item) {
+              var cards = $(".card:first").clone() //clona el primer div
+              var userId = item.userId;
+              var typeId = item.id;
+              var titleId = item.title;
+              var bodyId = item.body;
+              //agrega los datos dentro del div o carta
+              $(cards).find(".card-header").html("user id: " + userId + " - " + "id: " + typeId);
+              $(cards).find(".card-title").html(titleId);
+              $(cards).find(".card-text").html(bodyId);
+              $(cards).show() //muestra las cartas
+              $(cards).appendTo($(".row"))
+          });
+      }
+  });
+});
+
 $(document).ready(function () {
       $("#btn-login").click(function (event) { 
           var usuario = $("#usuario-login").val();
@@ -116,3 +140,4 @@ $(bt_reg).click(function(event){
   }
 });  
 //VALIDACIONES REGISTRO
+
