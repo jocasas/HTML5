@@ -586,3 +586,12 @@ hr:not([size]) {
   display:block;
   margin:auto;
 }
+
+#container-productos{
+  display: flex; 
+  justify-content: center;
+}
+
+#card-body{
+  
+}
