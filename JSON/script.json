@@ -44,8 +44,8 @@
         "numCarta": 5,
         "img": "img/med_img/amoxilina.jpg",
         "nombreProd": "AMOXICILINA",
-        "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
-        "unidades": "16 COMPRIMIDOS",
+        "body": "Amoxcilina(B) 500 MG",
+        "unidades": "21 COMPRIMIDOS",
         "desc":"",
         "price": 4311
     },
@@ -54,8 +54,8 @@
         "numCarta": 6,
         "img": "img/med_img/armonyl.jpg",
         "nombreProd": "ARMONYL",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
+        "body": "Armonyl 36 MG",
+        "unidades": "20 COMPRIMIDOS",
         "desc":"",
         "price": 2639
     },
