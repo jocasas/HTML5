@@ -184,6 +184,19 @@ nav {
   padding-bottom: 10px;
 }
 
+.formulario .div-inpunts {
+  width: 50%;
+  padding-right: 5%;
+  padding-left: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  
+  
+  
+}
+
 .formulario h3 {
   text-align: center;
   margin: 0;
@@ -194,10 +207,9 @@ nav {
 }
 
 .formulario input {
-  display: block;
-  width: 90%;
+  display: flex;
+  width: 100%;
   margin-top: 20px;
-  margin-left: 5%;
   padding: 10px;
   border-radius: 10px;
   border-style: hidden;
@@ -205,10 +217,9 @@ nav {
 }
 
 .formulario textarea {
-  display: block;
-  width: 90%;
+  display: flex;
+  width: 100%;
   margin-top: 20px;
-  margin-left: 5%;
   padding: 10px;
   border-radius: 10px;
   border-style: hidden;
@@ -336,6 +347,8 @@ hr:not([size]) {
 
 .contenedor_formulario {
   width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .contenedor_contenido h2 {
@@ -463,12 +476,6 @@ PAGINAS CARDS .CLONE()
 CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS 
 
 */
-.card-title{
-  font-size: 30px;
-  font-weight:bold;
-  color: #0074C8;
-}
-
 
 #pikachu{
   display:block;
@@ -486,6 +493,12 @@ CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS
 CARTAS MEDICAMENTOS-PRODUCTOS
 
 */
+#container-productos .card-title{
+  font-size: 30px;
+  font-weight:bold;
+  color: #0074C8;
+}
+
 #container-productos .card{
   display: flex;
   border-radius: 0%; 
@@ -529,6 +542,11 @@ CARTAS MEDICAMENTOS-PRODUCTOS
 CARTAS MASCOTAS
 
 */
+#container-mascotas .card-title{
+  font-size: 30px;
+  font-weight:bold;
+  color: #0074C8;
+}
 
 
 #container-mascotas .card{
@@ -565,6 +583,64 @@ CARTAS MASCOTAS
 }
 
 #container-mascotas .card:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  transform: none;
+}
+
+/* #container-medicamentos img {
+  border-radius: 30px;
+  padding-top: 5px;
+  width: auto;
+} */
+
+/* 
+
+/*
+  
+CARTAS sexualidad
+
+*/
+#container-sexualidad .card-title{
+  font-size: 30px;
+  font-weight:bold;
+  color: #0074C8;
+}
+
+
+#container-sexualidad .card{
+  display: flex;
+  border-radius: 0%; 
+  justify-content: center;
+}
+
+
+#container-sexualidad .card-header{
+  background-color:#58d0e879;
+  border-radius: 0%;
+  width: 100%;
+}
+/* textos med */
+#container-sexualidad .card-text{
+  text-align: center;
+  font-weight: bold;
+}
+
+#container-sexualidad .card-text2{
+  text-align: center;
+}
+
+#container-sexualidad .card-text3{
+  text-align: center;
+}
+
+#container-sexualidad .card-price{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color:rgb(112, 6, 116);
+}
+
+#container-sexualidad .card:hover{
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   transform: none;
 }
@@ -653,6 +729,32 @@ CARTAS MASCOTAS
 
   .contenedor_formulario {
     width: 50%;
+  }
+
+  .formulario input {
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: hidden;
+    outline: none;
+  }
+
+  .formulario textarea {
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: hidden;
+    outline: none;
+  }
+  .formulario .div-inpunts {
+    width: 100%;
+    
   }
 
   .contenedor_contenido h2 {

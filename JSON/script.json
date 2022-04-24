@@ -118,5 +118,126 @@
         "unidades": "16 COMPRIMIDOS",
         "desc":"",
         "price": 15000
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 1,
+        "img": "img/sex_img/anticonceptivas-slinda.jpg",
+        "nombreProd": "Slinda",
+        "body": "Anticonceptivas Slinda Com.Rec.",
+        "unidades": "28 Comprimidos",
+        "desc":"Forma Farmaceutica: COMPRIMIDOS RECUBIERTOS Dosis por Forma Farmaceutica: 4mg",
+        "price": 16990
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 2,
+        "img": "img/sex_img/anticonceptivas-tinelle.jpg",
+        "nombreProd": "Tinelle",
+        "body": "Tinelle 21mg/0.03mg 91Com.Rec.",
+        "unidades": "91 Comprimidos",
+        "desc":"Principio Activo: Dienogest / Etinilestradiol / Forma Farmaceutica: Comprimidos Recubiertos / Dosis por Forma Farmaceutica: 2mg ; 0.03mg",
+        "price": 31990
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 3,
+        "img": "img/sex_img/estimulante-YES!-HOT.jpg",
+        "nombreProd": "YES!-HOT",
+        "body": "Estimulante YES!-HOT",
+        "unidades": "55ml",
+        "desc":"YES! Hot, tiene una sugerente sensacion de calor que ayuda a estimular la zona vaginal. Favorece la lubricación en la relación sexual de forma segura ya que es hipoalergénico y no modifica el pH fisiológico de la zona.",
+        "price": 6490
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 4,
+        "img": "img/sex_img/estimulante-YES!-ICE.jpg",
+        "nombreProd": "YES!-ICE",
+        "body": "Estimulante YES!-ICE",
+        "unidades": "55ml",
+        "desc":"Gel lubricante sexual con agente refrescante. Favorece la lubricación y sensibilidad de la zona vaginal antes y/o durante la relación sexual de forma segura, sin modificar el pH fisiológico.",
+        "price": 6490
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 5,
+        "img": "img/sex_img/durex-max-placer.jpg",
+        "nombreProd": "Durex",
+        "body": "Preservativo Máximo Placer",
+        "unidades": "3 Unidades",
+        "desc":"Durex máximo Placer es un preservativo texturizado con puntos y estrías. Aseguran una mayor estimulación para ti y tu pareja. Están anatómicamente diseñados y texturizados para máximo placer.",
+        "price": 4990
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 6,
+        "img": "img/sex_img/lifeStyles-ultra-sensible-nuda.jpg",
+        "nombreProd": "LifeStyles",
+        "body": "Preservativos Nuda",
+        "unidades": "12 Unidades",
+        "desc":"Preservativo de látex más delgado, lo cual otorga una mayor sensibilidad provocando así una sensación más natural.",
+        "price": 7990
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 1,
+        "img": "img/bell_img/Paracetamol_500MG_16C_BE_HD.jpg",
+        "nombreProd": "PARACETAMOL",
+        "body": "Paracetamol(B) 500MG",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 879
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 2,
+        "img": "img/bell_img/diclofenaco.jpg",
+        "nombreProd": "DICLOFENACO",
+        "body": "Diclofenaco 50 MG",
+        "unidades": "10 COMPRIMIDOS",
+        "desc":"",
+        "price": 1677
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 3,
+        "img": "img/bell_img/tapsin.jpg",
+        "nombreProd": "TAPSIN FORTE",
+        "body": "Tapsin Forte 650 MG",
+        "unidades": "20 COMPRIMIDOS",
+        "desc":"",
+        "price": 2700
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 4,
+        "img": "img/bell_img/abrilar.jpg",
+        "nombreProd": "ABRILAR",
+        "body": "Abrilar Jarabe 100 ML",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 3599
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 5,
+        "img": "img/bell_img/amoxilina.jpg",
+        "nombreProd": "AMOXICILINA",
+        "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 4311
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 6,
+        "img": "img/bell_img/armonyl.jpg",
+        "nombreProd": "ARMONYL",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 2639
     }
+    
 ]
