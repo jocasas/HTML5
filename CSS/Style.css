@@ -463,12 +463,29 @@ PAGINAS CARDS .CLONE()
 CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS 
 
 */
+.card-title{
+  font-size: 30px;
+  font-weight:bold;
+  color: #0074C8;
+}
+
 
 #pikachu{
   display:block;
   margin:auto;
 }
 
+#btn-productos {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/*
+
+CARTAS MEDICAMENTOS-PRODUCTOS
+
+*/
 #container-productos .card{
   display: flex;
   border-radius: 0%; 
@@ -495,41 +512,68 @@ CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS
   text-align: center;
 }
 
-#container-medicamentos{
-  display: flex; 
-  justify-content: center;
+#container-productos .card-price{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color:rgb(112, 6, 116);
 }
 
-#container-medicamentos .card{
-  width: 350px; 
-  margin: 10px; 
-  display: flex; 
-  align-items: center;
-  transition: none;
-  background-color: #ffffff;
-}
-#container-medicamentos .card:hover{
+#container-productos .card:hover{
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   transform: none;
 }
 
-#container-medicamentos img {
+/*
+  
+CARTAS MASCOTAS
+
+*/
+
+
+#container-mascotas .card{
+  display: flex;
+  border-radius: 0%; 
+  justify-content: center;
+}
+
+
+#container-mascotas .card-header{
+  background-color:#58d0e879;
+  border-radius: 0%;
+  width: 100%;
+}
+/* textos med */
+#container-mascotas .card-text{
+  text-align: center;
+  font-weight: bold;
+}
+
+#container-mascotas .card-text2{
+  text-align: center;
+}
+
+#container-mascotas .card-text3{
+  text-align: center;
+}
+
+#container-mascotas .card-price{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color:rgb(112, 6, 116);
+}
+
+#container-mascotas .card:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  transform: none;
+}
+
+/* #container-medicamentos img {
   border-radius: 30px;
   padding-top: 5px;
   width: auto;
-}
-
-#btn-productos {
-  display:flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.card-title{
-  font-size: 30px;
-  font-weight:bold;
-  color: #0074C8;
-}
+} */
 
 /* 
 

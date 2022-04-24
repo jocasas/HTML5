@@ -54,7 +54,7 @@ $(document).ready(function () {
           $(cards).find("card-text3").html(descripcion);
           $(cards).find(".card-price").html("$" + price + " c/u");
           $(cards).show() //muestra las cartas
-          $(cards).appendTo($("#container-productos"))
+          $(cards).appendTo($("#container-mascotas"))
         }
       });
     }
