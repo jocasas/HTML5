@@ -481,6 +481,19 @@ CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS
   border-radius: 0%;
   width: 100%;
 }
+/* textos med */
+#container-productos .card-text{
+  text-align: center;
+  font-weight: bold;
+}
+
+#container-productos .card-text2{
+  text-align: center;
+}
+
+#container-productos .card-text3{
+  text-align: center;
+}
 
 #container-medicamentos{
   display: flex; 
@@ -515,7 +528,7 @@ CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS
 .card-title{
   font-size: 30px;
   font-weight:bold;
-
+  color: #0074C8;
 }
 
 /* 
