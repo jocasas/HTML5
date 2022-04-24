@@ -595,7 +595,7 @@ hr:not([size]) {
 
 
 #container-productos .card-header{
-  background-color:hsl(196, 90%, 88%);
+  background-color:#58d0e879;
   border-radius: 0%;
   width: 100%;
 }
