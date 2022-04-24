@@ -587,11 +587,15 @@ hr:not([size]) {
   margin:auto;
 }
 
-#container-productos{
-  display: flex; 
+#container-productos .card{
+  display: flex;
+  border-radius: 0%; 
   justify-content: center;
 }
 
-#card-body{
-  
+
+#container-productos .card-header{
+  background-color:hsl(196, 90%, 88%);
+  border-radius: 0%;
+  width: 100%;
 }
