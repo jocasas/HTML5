@@ -158,6 +158,8 @@ nav {
 .card img {
   width: 100%;
   height: 200px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .card:hover {
@@ -426,6 +428,60 @@ hr:not([size]) {
   border: none;
 }
 
+#pikachu{
+  display:block;
+  margin:auto;
+}
+
+#container-productos .card{
+  display: flex;
+  border-radius: 0%; 
+  justify-content: center;
+}
+
+
+#container-productos .card-header{
+  background-color:#58d0e879;
+  border-radius: 0%;
+  width: 100%;
+}
+
+#container-medicamentos{
+  display: flex; 
+  justify-content: center;
+}
+
+#container-medicamentos .card{
+  width: 350px; 
+  margin: 10px; 
+  display: flex; 
+  align-items: center;
+  transition: none;
+  background-color: #ffffff;
+}
+#container-medicamentos .card:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  transform: none;
+}
+
+#container-medicamentos img {
+  border-radius: 30px;
+  padding-top: 5px;
+  width: auto;
+}
+
+#btn-productos {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card-title{
+  font-size: 30px;
+  font-weight:bold;
+
+}
+
 @media screen and (min-width: 800px) {
   /* MENU RESPONSIVIDAD*/
   nav {
@@ -580,22 +636,4 @@ hr:not([size]) {
     height: 30px;
   }
 
-}
-
-#pikachu{
-  display:block;
-  margin:auto;
-}
-
-#container-productos .card{
-  display: flex;
-  border-radius: 0%; 
-  justify-content: center;
-}
-
-
-#container-productos .card-header{
-  background-color:#58d0e879;
-  border-radius: 0%;
-  width: 100%;
 }

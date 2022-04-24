@@ -31,12 +31,14 @@ $(document).ready(function () {
         var img = item.img;
         var nombreProd = item.nombreProd;
         var bodyId = item.body;
+        var price = item.price;
         if (categoriaCarta == 1 && window.location.pathname == '/medicamentos.html') {
           //agrega los datos dentro del div o carta
           /*               $(cards).find(".card-header").html("user id: " + categoriaCarta + " - " + "id: " + numCarta).hide(); */
           $(cards).find(".card-title").html(nombreProd);
           $(cards).find(".card-img-top").attr("src", img);
           $(cards).find(".card-text").html(bodyId);
+          $(cards).find(".card-price").html(price);
           $(cards).show() //muestra las cartas
           $(cards).appendTo($("#container-productos"))
 
@@ -44,6 +46,7 @@ $(document).ready(function () {
           $(cards).find(".card-title").html(nombreProd);
           $(cards).find(".card-img-top").attr("src", img);
           $(cards).find(".card-text").html(bodyId);
+          $(cards).find(".card-price").html(price);
           $(cards).show() //muestra las cartas
           $(cards).appendTo($("#container-productos"))
         }
