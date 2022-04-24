@@ -28,7 +28,7 @@
                     <i class="fas fa-bars"></i>
                 </label>
                 <ul class="nav-menu wrapper">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="active" href="index.html">Inicio</a></li>
                     <li><a href="#categorias">Categorias</a></li>
                     <li><a href="#">Hacer Pedido</a></li>
                     <li><a href="sesion2.html">Iniciar Sesion</a></li>
@@ -40,17 +40,23 @@
         <div>
             <IMG id="pikachu" SRC="/img/med_img/pikachu-running.gif">
         </div>
-        <section id="container-medicamentos" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
-            <div class="card h-80 text-black">
-                <!-- put item.userId & item.id below this -->
-                <div class="card-header"></div>
-                <img class="card-img-top" src="img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg" alt="Card image cap">
-                <div class="card-title"></div>
-                <div class="card-body">
-                    <p class="card-text"></p>
+        <section id="container-productos" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
+            <div style="display: flex; justify-content: center; " style="display: flex; justify-content: center; ">
+                <div class="card h-80 bg-light"
+                    style="width: 350px; margin: 10px; display: flex; align-items: center; ">
+                    <!-- put item.userId & item.id below this -->
+                    <div class="card-header"></div>
+                    <img class="card-img-top" src="img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg"
+                        alt="Card image cap">
+                    <div class="card-title"></div>
+                    <div class="card-body">
+                        <p class="card-text"></p>
+                        <p class="card-text2"></p>
+                        <p class="card-text3"></p>
+                    </div>
+                    <div class="card-price"></div>
+                    <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
                 </div>
-                <div class="card-price"></div>
-                <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
             </div>
         </section>
     </main>
@@ -127,6 +133,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9aec3b5dab.js" crossorigin="anonymous"></script>
+    <script src="/HTML5/JS/validatciones.js"></script>
     <script src="/JS/validatciones.js"></script>
     <script src="/JS/jqueryJson.js"></script>
 </body>

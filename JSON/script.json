@@ -3,51 +3,120 @@
         "categoriaCarta": 1,
         "numCarta": 1,
         "img": "img/med_img/Paracetamol_500MG_16C_BE_HD.jpg",
-        "nombreProd": "Paracetamol",
-        "body":"Paracetamol\nno hay mucho decir\n",
-        "price" : "$15000"
-        
+        "nombreProd": "PARACETAMOL",
+        "body": "Paracetamol(B) 500MG",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 879
     },
     {
         "categoriaCarta": 1,
         "numCarta": 2,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito",
-        "body":"est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-        "price" : "$15000"
+        "img": "img/med_img/diclofenaco.jpg",
+        "nombreProd": "DICLOFENACO",
+        "body": "Diclofenaco 50 MG",
+        "unidades": "10 COMPRIMIDOS",
+        "desc":"",
+        "price": 1677
     },
     {
         "categoriaCarta": 1,
         "numCarta": 3,
-        "img": "img/med_img/Paracetamol_500MG_16C_BE_HD.jpg",
-        "nombreProd": "perrito",
-        "body":"et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
-        "price" : "$15000"
-    },  
+        "img": "img/med_img/tapsin.jpg",
+        "nombreProd": "TAPSIN FORTE",
+        "body": "Tapsin Forte 650 MG",
+        "unidades": "20 COMPRIMIDOS",
+        "desc":"",
+        "price": 2700
+    },
     {
         "categoriaCarta": 1,
         "numCarta": 4,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito",
-        "body":"ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
-        "price" : "$15000"
+        "img": "img/med_img/abrilar.jpg",
+        "nombreProd": "ABRILAR",
+        "body": "Abrilar Jarabe 100 ML",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 3599
     },
     {
         "categoriaCarta": 1,
         "numCarta": 5,
-        "img": "img/med_img/Paracetamol_500MG_16C_BE_HD.jpg",
-        "nombreProd": "perrito",
-        "body":"repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
-        "price" : "$15000"
+        "img": "img/med_img/amoxilina.jpg",
+        "nombreProd": "AMOXICILINA",
+        "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 4311
     },
     {
         "categoriaCarta": 1,
         "numCarta": 6,
-        "img":"img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "dperrito",
+        "img": "img/med_img/armonyl.jpg",
+        "nombreProd": "ARMONYL",
         "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "price" : "$15000"
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 2639
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 1,
+        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
+        "nombreProd": "perrito1",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 15000
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 2,
+        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
+        "nombreProd": "perrito2",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 15000
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 3,
+        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
+        "nombreProd": "perrito3",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 15000
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 4,
+        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
+        "nombreProd": "perrito4",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 15000
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 5,
+        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
+        "nombreProd": "perrito5",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 15000
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 6,
+        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
+        "nombreProd": "perrito6",
+        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 15000
     }
-
-
 ]
