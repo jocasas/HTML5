@@ -32,7 +32,7 @@ $(document).ready(function () {
               //agrega los datos dentro del div o carta
               $(cards).find(".card-header").html("user id: " + categoriaCarta + " - " + "id: " + numCarta);
               $(cards).find(".card-title").html(nombreProd);
-              $(cards).find(".card-img-top").html(img);
+              $(cards).find(".card-img-top").attr("src",img);
               $(cards).find(".card-text").html(bodyId);
               $(cards).show() //muestra las cartas
               $(cards).appendTo($("#container-productos"))
