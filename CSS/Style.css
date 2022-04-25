@@ -16,6 +16,7 @@ body {
   max-width: 1200px;
   margin: auto;
   overflow: hidden;
+  justify-content: center;
 }
 
 main {
@@ -191,10 +192,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  
-  
-  
-  
+
 }
 
 .formulario h3 {
@@ -347,8 +345,6 @@ hr:not([size]) {
 
 .contenedor_formulario {
   width: 50%;
-  display: flex;
-  justify-content: center;
 }
 
 .contenedor_contenido h2 {
@@ -597,7 +593,7 @@ CARTAS MASCOTAS
 
 /*
   
-CARTAS sexualidad
+CARTAS SEXUALIDAD
 
 */
 #container-sexualidad .card-title{
@@ -650,6 +646,56 @@ CARTAS sexualidad
   padding-top: 5px;
   width: auto;
 } */
+
+/*
+  
+CARTAS BELLEZA
+
+*/
+#container-belleza .card-title{
+  font-size: 30px;
+  font-weight:bold;
+  color: #0074C8;
+}
+
+
+#container-belleza .card{
+  display: flex;
+  border-radius: 0%; 
+  justify-content: center;
+}
+
+
+#container-belleza .card-header{
+  background-color:#58d0e879;
+  border-radius: 0%;
+  width: 100%;
+}
+/* textos med */
+#container-belleza .card-text{
+  text-align: center;
+  font-weight: bold;
+}
+
+#container-belleza .card-text2{
+  text-align: center;
+}
+
+#container-belleza .card-text3{
+  text-align: center;
+}
+
+#container-belleza .card-price{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color:rgb(112, 6, 116);
+}
+
+#container-sexualidad .card:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  transform: none;
+}
 
 /* 
 

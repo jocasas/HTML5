@@ -64,7 +64,18 @@ if (window.location.pathname !== '/index.html') {
             $(cards).find(".card-price").html("$" + price + " c/u");
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-sexualidad"))
-          }
+          } else if (categoriaCarta == 4 && window.location.pathname == '/belleza.html') {
+            $(cards).find(".card-title").html(nombreProd);
+            $(cards).find(".card-img-top").attr("src", img);
+            $(cards).find(".card-text").html(bodyId);
+            $(cards).find(".card-text2").html(unidad);
+            $(cards).find(".card-text3").html(descripcion);
+            $(cards).find(".card-price").html("$" + price + " c/u");
+            $(cards).show() //muestra las cartas
+            $(cards).appendTo($("#container-belleza"))
+          } 
+          
+
         });
       }
     });

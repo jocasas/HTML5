@@ -182,62 +182,62 @@
     {
         "categoriaCarta": 4,
         "numCarta": 1,
-        "img": "img/bell_img/Paracetamol_500MG_16C_BE_HD.jpg",
-        "nombreProd": "PARACETAMOL",
-        "body": "Paracetamol(B) 500MG",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 879
+        "img": "img/bell_img/Agua-micelar-Loreal.jpg",
+        "nombreProd": "Agua Micelar",
+        "body": "Agua Micelar Hialurónico 200 Ml",
+        "unidades": "200ml",
+        "desc":"Nueva Agua Micelar Hidratante Revitalift Ácido Hialurónico. Limpia sin resecar, desmaquilla eficazmente y rellena la piel con hidratación.",
+        "price": 4590
     },
     {
         "categoriaCarta": 4,
         "numCarta": 2,
-        "img": "img/bell_img/diclofenaco.jpg",
-        "nombreProd": "DICLOFENACO",
-        "body": "Diclofenaco 50 MG",
-        "unidades": "10 COMPRIMIDOS",
-        "desc":"",
-        "price": 1677
+        "img": "img/bell_img/Mascarilla-Revitalift.jpg",
+        "nombreProd": "Revitalift",
+        "body": "Tissue Revitalift Ácido Hialurónico",
+        "unidades": "1 Unidad",
+        "desc":"Marcarilla Revitalift Ácido Hialurónico de L'Oréal Paris. Mascarilla en tela de hidratación intensa con ácido hialurónico puro.",
+        "price": 3190
     },
     {
         "categoriaCarta": 4,
         "numCarta": 3,
-        "img": "img/bell_img/tapsin.jpg",
-        "nombreProd": "TAPSIN FORTE",
-        "body": "Tapsin Forte 650 MG",
-        "unidades": "20 COMPRIMIDOS",
-        "desc":"",
-        "price": 2700
+        "img": "img/bell_img/Colorante-Cabello-Rojo.jpg",
+        "nombreProd": "Tintura Cobrizo Rubí",
+        "body": "Tintura Nutrisse N°6646 Cobrizo Rubí",
+        "unidades": "1 Unidad",
+        "desc":"Coloración Nutrisse con todo el poder de sus 4 aceites (palta, uva, oliva y grosella) y su gota nutritiva para un cabello nutrido y mejor color.",
+        "price": 6190
     },
     {
         "categoriaCarta": 4,
         "numCarta": 4,
-        "img": "img/bell_img/abrilar.jpg",
-        "nombreProd": "ABRILAR",
-        "body": "Abrilar Jarabe 100 ML",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 3599
+        "img": "img/bell_img/Colorante-Cabello-Rubio.jpg",
+        "nombreProd": "Tintura Rubio Ceniza",
+        "body": "Tintura Cor Intensa N° 8,1 Rubio Ceniza",
+        "unidades": "1 Unidad",
+        "desc":"La fórmula hidratante de Cor Intensa garantiza la máxima hidratación y un color perfecto. Con textura cremosa y aroma floral, su aplicación es fácil y agradable.",
+        "price": 2690
     },
     {
         "categoriaCarta": 4,
         "numCarta": 5,
-        "img": "img/bell_img/amoxilina.jpg",
-        "nombreProd": "AMOXICILINA",
-        "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 4311
+        "img": "img/bell_img/Esmalte-Color-Piel.jpg",
+        "nombreProd": "Esmalte Palo Rosa 24",
+        "body": "Esmalte Super Fantastic Palo Rosa 24 Vogue",
+        "unidades": "10ml",
+        "desc":"Esmalte de la colección fantastic, con maximo brillo y pincel plano.",
+        "price": 1990
     },
     {
         "categoriaCarta": 4,
         "numCarta": 6,
-        "img": "img/bell_img/armonyl.jpg",
-        "nombreProd": "ARMONYL",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 2639
+        "img": "img/bell_img/Esmalte-Color-Transparente.jpg",
+        "nombreProd": "Tratamiento Uñas",
+        "body": "Tratamiento Uñas Pro Fortalecimiento",
+        "unidades": "10ml",
+        "desc":"Esmalte con pincel plano de alta cobertura.",
+        "price": 2690
     }
     
 ]
