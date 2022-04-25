@@ -543,6 +543,11 @@ CARTAS MASCOTAS
   border-radius: 0%;
   width: 100%;
 }
+
+#container-mascotas .card-img-top{
+  background-color: white;
+}
+
 /* textos med */
 #container-mascotas .card-text{
   text-align: center;

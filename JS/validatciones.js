@@ -41,7 +41,7 @@ $(document).ready(function () {
             $(cards).find(".card-img-top").attr("src", img);
             $(cards).find(".card-text").html(bodyId);
             $(cards).find(".card-text2").html(unidad);
-            $(cards).find("card-text3").html(descripcion);
+            $(cards).find(".card-text3").html(descripcion);
             $(cards).find(".card-price").html("$" + price + " c/u");
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-productos"))
@@ -51,7 +51,7 @@ $(document).ready(function () {
             $(cards).find(".card-img-top").attr("src", img);
             $(cards).find(".card-text").html(bodyId);
             $(cards).find(".card-text2").html(unidad);
-            $(cards).find("card-text3").html(descripcion);
+            $(cards).find(".card-text3").html(descripcion);
             $(cards).find(".card-price").html("$" + price + " c/u");
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-mascotas"))

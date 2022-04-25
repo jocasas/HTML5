@@ -62,61 +62,61 @@
     {
         "categoriaCarta": 2,
         "numCarta": 1,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito1",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 15000
+        "img": "img/mas_img/adulto_pequeña.jpg",
+        "nombreProd": "FIT FORMULA",
+        "body": "Adulto Raza Pequeña",
+        "unidades": "10Kg",
+        "desc":"Alimento completo y balanceado desarrollado con ingredientes de alta digestibilidad.",
+        "price": 19990
     },
     {
         "categoriaCarta": 2,
         "numCarta": 2,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito2",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 15000
+        "img": "img/mas_img/light.jpg",
+        "nombreProd": "FIT FORMULA",
+        "body": "Adulto Light",
+        "unidades": "20Kg",
+        "desc":"Un 25% menos de materia grasa total.Mayor aporte de ácidos grasos esenciales Omega 3, que ayudan a disminuir la inflamación crónica.",
+        "price": 39990
     },
     {
         "categoriaCarta": 2,
         "numCarta": 3,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito3",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 15000
+        "img": "img/mas_img/senior.jpg",
+        "nombreProd": "FIT FORMULA",
+        "body": "Adulto Senior",
+        "unidades": "20Kg",
+        "desc":"Proteínas de alta calidad y digestibilidad, para preservar su masa muscular.Mayor porcentaje de fibra, para facilitar el tránsito intestinal.",
+        "price": 39990
     },
     {
         "categoriaCarta": 2,
         "numCarta": 4,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito4",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 15000
+        "img": "img/mas_img/oftavet.jpg",
+        "nombreProd": "OFTAVET",
+        "body": "Oftavet (Ciprofloxacino)",
+        "unidades": "5ML",
+        "desc":"Antibiótico de uso tópico indicado para tratar infecciones oculares superficiales y profundas del ojo y sus anexos, incluyendo úlceras corneales infectadas con bacterias sensibles a la droga.",
+        "price": 17790
     },
     {
         "categoriaCarta": 2,
         "numCarta": 5,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito5",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 15000
+        "img": "img/mas_img/APETICAT.jpg",
+        "nombreProd": "APETICAT",
+        "body": "Apeticat Jarabe",
+        "unidades": "100ml",
+        "desc":"Suplemento vitamínico con Taurina - Carnitina para gatos.",
+        "price": 9800
     },
     {
         "categoriaCarta": 2,
         "numCarta": 6,
-        "img": "img/med_img/ffd91a748ab3afc1f3da1ff471d8f7a5.jpg",
-        "nombreProd": "perrito6",
-        "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
-        "unidades": "16 COMPRIMIDOS",
-        "desc":"",
-        "price": 15000
+        "img": "img/mas_img/Invermic.jpg",
+        "nombreProd": "INVERMIC",
+        "body": "Invermic Gatos Levamisol",
+        "unidades": "2% Gotas 10 mL",
+        "desc":"Potente antihelmíntico de uso oral y acción sistémica, en dosis única elimina las formas larvarias y adultas de nematodos del tracto gastrointestinal y de las vías respiratorias.",
+        "price": 2790
     }
 ]
