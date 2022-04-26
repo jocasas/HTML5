@@ -55,12 +55,31 @@ $(document).ready(function () {
             $(cards).find(".card-price").html("$" + price + " c/u");
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-mascotas"))
-          }
+          } else if (categoriaCarta == 3 && window.location.pathname == '/sexualidad.html') {
+            $(cards).find(".card-title").html(nombreProd);
+            $(cards).find(".card-img-top").attr("src", img);
+            $(cards).find(".card-text").html(bodyId);
+            $(cards).find(".card-text2").html(unidad);
+            $(cards).find(".card-text3").html(descripcion);
+            $(cards).find(".card-price").html("$" + price + " c/u");
+            $(cards).show() //muestra las cartas
+            $(cards).appendTo($("#container-sexualidad"))
+          } else if (categoriaCarta == 4 && window.location.pathname == '/belleza.html') {
+            $(cards).find(".card-title").html(nombreProd);
+            $(cards).find(".card-img-top").attr("src", img);
+            $(cards).find(".card-text").html(bodyId);
+            $(cards).find(".card-text2").html(unidad);
+            $(cards).find(".card-text3").html(descripcion);
+            $(cards).find(".card-price").html("$" + price + " c/u");
+            $(cards).show() //muestra las cartas
+            $(cards).appendTo($("#container-belleza"))
+          } 
+          
+
         });
       }
     });
   }
-
   /* Validaciones Login */
 
   $("#btn-login").click(function (event) {
@@ -97,7 +116,7 @@ $(document).ready(function () {
     var emailreg = /^([a-z A-Z 0-9_\.\-])+\@(([a-z A-Z 0-9\-])+\.)+([a-z A-Z 0-9]{2,4})+$/;
     var email = $('#correo').val();
     var usuario = $('#usuario').val();
-
+    
     //4.val clave rep
     if (pass2 !== pass || pass2 == "") {
       $("#clave2").focus();
@@ -109,7 +128,7 @@ $(document).ready(function () {
       $("#clave").css({ 'borderColor': '#ffffff' })
     }
 
-    //3.val clave
+  //3.val clave
     if (pass.length = "") {
       $("#clave").focus();
       $("#error3").fadeIn();
@@ -123,13 +142,13 @@ $(document).ready(function () {
         $("#clave").focus();
         $("#error3").fadeIn();
         $("#clave").css({ 'borderColor': '#fa1b1b' })
-
+  
         event.preventDefault();
-
+  
       }
     }
 
-    //2.val correo  
+  //2.val correo  
     if (email == "" || !emailreg.test(email)) {
       $("#correo").focus();
       $("#error2").fadeIn();
@@ -139,8 +158,8 @@ $(document).ready(function () {
       $("#correo").css({ 'borderColor': '#ffffff' })
       $("#error2").hide();
     }
-
-    //1.val usuario
+  
+  //1.val usuario
     if (usuario.length > 3 && usuario.length < 9) {
       $("#error1").hide();
       $("#usuario").css({ 'borderColor': '#ffffff' })
@@ -151,5 +170,5 @@ $(document).ready(function () {
       event.preventDefault();
     }
   });
-
+  
 });
