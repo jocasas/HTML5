@@ -804,6 +804,7 @@ CARTAS BELLEZA
     border-style: hidden;
     outline: none;
   }
+  
   .formulario .div-inpunts {
     width: 100%;
     
@@ -890,6 +891,33 @@ CARTAS BELLEZA
   #form_registro input {
     width: 100%;
     height: 30px;
+  }
+
+}
+
+@media screen and (max-width: 1600px){
+  .contenedor_login {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 80px;
+  }
+
+  .contenedor_registro {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 80px;
+  }
+
+  .contenedor_img img {
+    height:100%;
   }
 
 }
