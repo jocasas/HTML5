@@ -19,10 +19,10 @@
 
 $(document).ready(function () {
 
-  if (window.location.pathname !== '/index.html') {
+  if (window.location.pathname !== '/HTML5/index.html') {
     $(".card:first").hide()
     $.ajax({
-      url: "/JSON/script.json",
+      url: "/HTML5/JSON/script.json",
       success: function (result) {
         $.each(result, function (index, item) {
           var cards = $(".card:first").clone() //clona el primer div
@@ -34,7 +34,7 @@ $(document).ready(function () {
           var unidad = item.unidades;
           var descripcion = item.desc;
           var price = item.price;
-          if (categoriaCarta == 1 && window.location.pathname == '/medicamentos.html') {
+          if (categoriaCarta == 1 && window.location.pathname == '/HTML5/medicamentos.html') {
             //agrega los datos dentro del div o carta
             /*               $(cards).find(".card-header").html("user id: " + categoriaCarta + " - " + "id: " + numCarta).hide(); */
             $(cards).find(".card-title").html(nombreProd);
@@ -46,7 +46,7 @@ $(document).ready(function () {
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-productos"))
 
-          } else if (categoriaCarta == 2 && window.location.pathname == '/mascotas.html') {
+          } else if (categoriaCarta == 2 && window.location.pathname == '/HTML5/mascotas.html') {
             $(cards).find(".card-title").html(nombreProd);
             $(cards).find(".card-img-top").attr("src", img);
             $(cards).find(".card-text").html(bodyId);
@@ -55,7 +55,7 @@ $(document).ready(function () {
             $(cards).find(".card-price").html("$" + price + " c/u");
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-mascotas"))
-          } else if (categoriaCarta == 3 && window.location.pathname == '/sexualidad.html') {
+          } else if (categoriaCarta == 3 && window.location.pathname == '/HTML5/sexualidad.html') {
             $(cards).find(".card-title").html(nombreProd);
             $(cards).find(".card-img-top").attr("src", img);
             $(cards).find(".card-text").html(bodyId);
@@ -64,7 +64,7 @@ $(document).ready(function () {
             $(cards).find(".card-price").html("$" + price + " c/u");
             $(cards).show() //muestra las cartas
             $(cards).appendTo($("#container-sexualidad"))
-          } else if (categoriaCarta == 4 && window.location.pathname == '/belleza.html') {
+          } else if (categoriaCarta == 4 && window.location.pathname == '/HTML5/belleza.html') {
             $(cards).find(".card-title").html(nombreProd);
             $(cards).find(".card-img-top").attr("src", img);
             $(cards).find(".card-text").html(bodyId);
