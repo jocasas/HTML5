@@ -499,6 +499,9 @@ CARTAS MEDICAMENTOS-PRODUCTOS
   display: flex;
   border-radius: 0%; 
   justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 10px;
 }
 
 
@@ -549,6 +552,9 @@ CARTAS MASCOTAS
   display: flex;
   border-radius: 0%; 
   justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 10px;
 }
 
 
@@ -607,11 +613,13 @@ CARTAS SEXUALIDAD
   color: #0074C8;
 }
 
-
 #container-sexualidad .card{
   display: flex;
   border-radius: 0%; 
   justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 10px;
 }
 
 
@@ -669,6 +677,9 @@ CARTAS BELLEZA
   display: flex;
   border-radius: 0%; 
   justify-content: center;
+  align-items: center;
+  width: 350px;
+  margin: 10px;
 }
 
 
