@@ -2,7 +2,7 @@
     {
         "categoriaCarta": 1,
         "numCarta": 1,
-        "img": "img/med_img/Paracetamol_500MG_16C_BE_HD.jpg",
+        "img": "/static/farmacia/img/med_img/Paracetamol_500MG_16C_BE_HD.jpg",
         "nombreProd": "PARACETAMOL",
         "body": "Paracetamol(B) 500MG",
         "unidades": "16 COMPRIMIDOS",
@@ -12,7 +12,7 @@
     {
         "categoriaCarta": 1,
         "numCarta": 2,
-        "img": "img/med_img/diclofenaco.jpg",
+        "img": "/static/farmacia/img/med_img/diclofenaco.jpg",
         "nombreProd": "DICLOFENACO",
         "body": "Diclofenaco 50 MG",
         "unidades": "10 COMPRIMIDOS",
@@ -22,7 +22,7 @@
     {
         "categoriaCarta": 1,
         "numCarta": 3,
-        "img": "img/med_img/tapsin.jpg",
+        "img": "/static/farmacia/img/med_img/tapsin.jpg",
         "nombreProd": "TAPSIN FORTE",
         "body": "Tapsin Forte 650 MG",
         "unidades": "20 COMPRIMIDOS",
@@ -32,7 +32,7 @@
     {
         "categoriaCarta": 1,
         "numCarta": 4,
-        "img": "img/med_img/abrilar.jpg",
+        "img": "/static/farmacia/img/med_img/abrilar.jpg",
         "nombreProd": "ABRILAR",
         "body": "Abrilar Jarabe 100 ML",
         "unidades": "16 COMPRIMIDOS",
@@ -42,7 +42,7 @@
     {
         "categoriaCarta": 1,
         "numCarta": 5,
-        "img": "img/med_img/amoxilina.jpg",
+        "img": "/static/farmacia/img/med_img/amoxilina.jpg",
         "nombreProd": "AMOXICILINA",
         "body": "Amoxcilina(B) 500 MG",
         "unidades": "21 COMPRIMIDOS",
@@ -52,7 +52,7 @@
     {
         "categoriaCarta": 1,
         "numCarta": 6,
-        "img": "img/med_img/armonyl.jpg",
+        "img": "/static/farmacia/img/med_img/armonyl.jpg",
         "nombreProd": "ARMONYL",
         "body": "Armonyl 36 MG",
         "unidades": "20 COMPRIMIDOS",
@@ -62,7 +62,7 @@
     {
         "categoriaCarta": 2,
         "numCarta": 1,
-        "img": "img/mas_img/adulto_pequeña.jpg",
+        "img": "/static/farmacia/img/mas_img/adulto_pequeña.jpg",
         "nombreProd": "FIT FORMULA",
         "body": "Adulto Raza Pequeña",
         "unidades": "10Kg",
@@ -72,7 +72,7 @@
     {
         "categoriaCarta": 2,
         "numCarta": 2,
-        "img": "img/mas_img/light.jpg",
+        "img": "/static/farmacia/img/mas_img/light.jpg",
         "nombreProd": "FIT FORMULA",
         "body": "Adulto Light",
         "unidades": "20Kg",
@@ -82,7 +82,7 @@
     {
         "categoriaCarta": 2,
         "numCarta": 3,
-        "img": "img/mas_img/senior.jpg",
+        "img": "/static/farmacia/img/mas_img/senior.jpg",
         "nombreProd": "FIT FORMULA",
         "body": "Adulto Senior",
         "unidades": "20Kg",
@@ -92,7 +92,7 @@
     {
         "categoriaCarta": 2,
         "numCarta": 4,
-        "img": "img/mas_img/oftavet.jpg",
+        "img": "/static/farmacia/img/mas_img/oftavet.jpg",
         "nombreProd": "OFTAVET",
         "body": "Oftavet (Ciprofloxacino)",
         "unidades": "5ML",
@@ -102,7 +102,7 @@
     {
         "categoriaCarta": 2,
         "numCarta": 5,
-        "img": "img/mas_img/APETICAT.jpg",
+        "img": "/static/farmacia/img/mas_img/APETICAT.jpg",
         "nombreProd": "APETICAT",
         "body": "Apeticat Jarabe",
         "unidades": "100ml",
@@ -112,7 +112,7 @@
     {
         "categoriaCarta": 2,
         "numCarta": 6,
-        "img": "img/mas_img/Invermic.jpg",
+        "img": "/static/farmacia/img/mas_img/Invermic.jpg",
         "nombreProd": "INVERMIC",
         "body": "Invermic Gatos Levamisol",
         "unidades": "2% Gotas 10 mL",
@@ -122,7 +122,7 @@
     {
         "categoriaCarta": 3,
         "numCarta": 1,
-        "img": "img/sex_img/anticonceptivas-slinda.jpg",
+        "img": "/static/farmacia/img/sex_img/anticonceptivas-slinda.jpg",
         "nombreProd": "Slinda",
         "body": "Anticonceptivas Slinda Com.Rec.",
         "unidades": "28 Comprimidos",
@@ -132,7 +132,7 @@
     {
         "categoriaCarta": 3,
         "numCarta": 2,
-        "img": "img/sex_img/anticonceptivas-tinelle.jpg",
+        "img": "/static/farmacia/img/sex_img/anticonceptivas-tinelle.jpg",
         "nombreProd": "Tinelle",
         "body": "Tinelle 21mg/0.03mg 91Com.Rec.",
         "unidades": "91 Comprimidos",
@@ -142,7 +142,7 @@
     {
         "categoriaCarta": 3,
         "numCarta": 3,
-        "img": "img/sex_img/estimulante-YES!-HOT.jpg",
+        "img": "/static/farmacia/img/sex_img/estimulante-YES!-HOT.jpg",
         "nombreProd": "YES!-HOT",
         "body": "Estimulante YES!-HOT",
         "unidades": "55ml",
@@ -152,7 +152,7 @@
     {
         "categoriaCarta": 3,
         "numCarta": 4,
-        "img": "img/sex_img/estimulante-YES!-ICE.jpg",
+        "img": "/static/farmacia/img/sex_img/estimulante-YES!-ICE.jpg",
         "nombreProd": "YES!-ICE",
         "body": "Estimulante YES!-ICE",
         "unidades": "55ml",
@@ -162,7 +162,7 @@
     {
         "categoriaCarta": 3,
         "numCarta": 5,
-        "img": "img/sex_img/durex-max-placer.jpg",
+        "img": "/static/farmacia/img/sex_img/durex-max-placer.jpg",
         "nombreProd": "Durex",
         "body": "Preservativo Máximo Placer",
         "unidades": "3 Unidades",
@@ -172,7 +172,7 @@
     {
         "categoriaCarta": 3,
         "numCarta": 6,
-        "img": "img/sex_img/lifeStyles-ultra-sensible-nuda.jpg",
+        "img": "/static/farmacia/img/sex_img/lifeStyles-ultra-sensible-nuda.jpg",
         "nombreProd": "LifeStyles",
         "body": "Preservativos Nuda",
         "unidades": "12 Unidades",
@@ -182,7 +182,7 @@
     {
         "categoriaCarta": 4,
         "numCarta": 1,
-        "img": "img/bell_img/Agua-micelar-Loreal.jpg",
+        "img": "/static/farmacia/img/bell_img/Agua-micelar-Loreal.jpg",
         "nombreProd": "Agua Micelar",
         "body": "Agua Micelar Hialurónico 200 Ml",
         "unidades": "200ml",
@@ -192,7 +192,7 @@
     {
         "categoriaCarta": 4,
         "numCarta": 2,
-        "img": "img/bell_img/Mascarilla-Revitalift.jpg",
+        "img": "/static/farmacia/img/bell_img/Mascarilla-Revitalift.jpg",
         "nombreProd": "Revitalift",
         "body": "Tissue Revitalift Ácido Hialurónico",
         "unidades": "1 Unidad",
@@ -202,7 +202,7 @@
     {
         "categoriaCarta": 4,
         "numCarta": 3,
-        "img": "img/bell_img/Colorante-Cabello-Rojo.jpg",
+        "img": "/static/farmacia/img/bell_img/Colorante-Cabello-Rojo.jpg",
         "nombreProd": "Tintura Cobrizo Rubí",
         "body": "Tintura Nutrisse N°6646 Cobrizo Rubí",
         "unidades": "1 Unidad",
@@ -212,7 +212,7 @@
     {
         "categoriaCarta": 4,
         "numCarta": 4,
-        "img": "img/bell_img/Colorante-Cabello-Rubio.jpg",
+        "img": "/static/farmacia/img/bell_img/Colorante-Cabello-Rubio.jpg",
         "nombreProd": "Tintura Rubio Ceniza",
         "body": "Tintura Cor Intensa N° 8,1 Rubio Ceniza",
         "unidades": "1 Unidad",
@@ -222,7 +222,7 @@
     {
         "categoriaCarta": 4,
         "numCarta": 5,
-        "img": "img/bell_img/Esmalte-Color-Piel.jpg",
+        "img": "/static/farmacia/img/bell_img/Esmalte-Color-Piel.jpg",
         "nombreProd": "Esmalte Palo Rosa 24",
         "body": "Esmalte Super Fantastic Palo Rosa 24 Vogue",
         "unidades": "10ml",
@@ -232,7 +232,7 @@
     {
         "categoriaCarta": 4,
         "numCarta": 6,
-        "img": "img/bell_img/Esmalte-Color-Transparente.jpg",
+        "img": "/static/farmacia/img/bell_img/Esmalte-Color-Transparente.jpg",
         "nombreProd": "Tratamiento Uñas",
         "body": "Tratamiento Uñas Pro Fortalecimiento",
         "unidades": "10ml",

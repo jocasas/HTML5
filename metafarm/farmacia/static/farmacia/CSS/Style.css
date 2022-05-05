@@ -894,6 +894,70 @@ CARTAS BELLEZA
 
 }
 
+@media screen and (max-width: 1600px){
+  .contenedor_login {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 80px;
+  }
+
+  .contenedor_registro {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 80px;
+  }
+
+  .contenedor_img img {
+    height:100%;
+  }
+
+}
+
+@media screen and (max-width: 1280px){
+
+  .input {
+    margin-bottom: 0px;
+  }
+
+  .errores{
+    font-size: small;
+  }
+
+  #form_registro input {
+    width: 100%;
+    height: 40px;
+  }
+
+  .contenedor_login {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 55px;
+  }
+
+  .contenedor_registro {
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 55px;
+  }
+
+}
+
 /* 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
