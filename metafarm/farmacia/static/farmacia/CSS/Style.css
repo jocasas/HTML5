@@ -6,9 +6,35 @@
   box-sizing: border-box;
 }
 
+#myBtn {
+  display: none;
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border:none; 
+  outline: none; 
+  background-color: #0066ff81; 
+  color: #ffffffc2;
+  cursor: pointer;
+  padding: 20px; 
+  border-radius: 100px;
+  font-size: 20px; 
+}
+
+#myBtn:hover {
+  background-color: #555; 
+}
+
 body {
   background: #ffffff;
   font-family: "Roboto", sans-serif;
+  background-image: url(../img/fondo3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  
 }
 
 .wrapper {
@@ -178,14 +204,18 @@ nav {
   transform: translateY(-3%);
 }
 
-.formulario {
-  background-color: #f8f9fa;
+.formulario-index {
   width: 100%;
   margin: auto;
   padding-bottom: 10px;
+  background: #17b8d825;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid #f8f9fa;
 }
 
-.formulario .div-inpunts {
+.formulario-index .div-inpunts {
   width: 50%;
   padding-right: 5%;
   padding-left: 5%;
@@ -195,7 +225,7 @@ nav {
 
 }
 
-.formulario h3 {
+.formulario-index h3 {
   text-align: center;
   margin: 0;
   padding-top: 10px;
@@ -204,7 +234,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.formulario input {
+.formulario-index input {
   display: flex;
   width: 100%;
   margin-top: 20px;
@@ -214,7 +244,7 @@ nav {
   outline: none;
 }
 
-.formulario textarea {
+.formulario-index textarea {
   display: flex;
   width: 100%;
   margin-top: 20px;
@@ -224,21 +254,21 @@ nav {
   outline: none;
 }
 
-.formulario input:focus {
+.formulario-index input:focus {
   transition: 0.3s;
   border: 1px solid #4195fc;
   box-shadow: 0px 0px 5px #4195fc;
   border-radius: 30px;
 }
 
-.formulario textarea:focus {
+.formulario-index textarea:focus {
   transition: 0.3s;
   border: 1px solid #4195fc;
   box-shadow: 0px 0px 5px #4195fc;
   border-radius: 30px;
 }
 
-.formulario textarea {
+.formulario-index textarea {
   min-height: 100px;
   max-height: 200px;
   max-width: 100%;
@@ -289,10 +319,6 @@ nav {
   border-radius: 20px;
 }
 
-hr:not([size]) {
-  height: 1px;
-  margin: 0;
-}
 
 #formfooter .row {
   display: flex;
@@ -318,6 +344,7 @@ hr:not([size]) {
   margin-top: 160px;
   border-radius: 30px;
   align-items: center;
+  
 }
 
 .contenedor_img {
@@ -472,6 +499,27 @@ PAGINAS CARDS .CLONE()
 CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS 
 
 */
+#container-mascotas #btn-mod{
+  text-decoration: none;
+  color: rgb(92, 92, 92);
+  font-size: 2rem;
+  position: relative;
+}
+
+#container-mascotas #btn-del {
+  text-decoration: none;
+  color: rgb(92, 92, 92);
+  font-size: 2rem;
+  position: relative;
+  
+}
+
+.btns-up-del {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 #container-productos .card-title{
   font-size: 30px;
   font-weight:bold;
@@ -577,6 +625,34 @@ CARTAS MASCOTAS
   transform: none;
 }
 
+.btn-agregar {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.btn-agregar:hover {
+  text-decoration: none;
+  color: white;
+
+}
+
+#contenedor-agregar {
+  display: flex;
+  width:fit-content;
+  background-color: #adadad;
+  border-radius: 30px;
+  justify-items: flex-end;
+  justify-content: flex-end;
+  margin-left: 82%;
+}
+
+#contenedor-agregar:hover {
+
+  background-color: #17b8d8;
+  transition: 1s;
+}
+
 /* #container-medicamentos img {
   border-radius: 30px;
   padding-top: 5px;
@@ -812,7 +888,92 @@ CARTAS BELLEZA
   transform: none;
 }
 
-/* 
+/*
+
+CSS Formulario ADD
+
+*/
+
+#FormAdd .formulario-updade{
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  margin: 2% auto;
+  width: 50%;
+
+}
+
+.formulario-updade textarea {
+  display: flex;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: hidden;
+  outline: none;
+  max-height: 250px;
+}
+
+.formulario-updade input{
+  width: 70%;
+  margin-top: 0%;
+  margin-bottom: 20px;
+}
+
+.formulario-updade select{
+  width: 40%;
+  margin-top: 0%;
+  margin-bottom: 20px;
+}
+
+.formulario-updade label{
+  font-weight:500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.formulario-updade h1{
+  font-weight:bold;
+  padding-bottom: 10px;
+}
+
+.formulario-updade #id_photo_as_blob{
+  width: 380px;
+}
+
+.alert {
+  display: none;
+}
+
+.Guardar-prod {
+  background: #7ddbd3;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 0% 5%;
+
+}
+
+.contenedor-guardar{
+  display: flex;
+  justify-content: center;
+  margin-top: 0%;
+}
+/*
+
+CSS Carussel
+
+*/
+.carousel-inner {
+  border-radius: 40px;
+}
+
+/*
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -892,7 +1053,10 @@ CARTAS BELLEZA
     width: 50%;
   }
 
-  .formulario input {
+  .formulario-index .div-inpunts {
+    width: 100%;
+  }
+  .formulario-index input {
     display: block;
     width: 90%;
     margin-top: 20px;
@@ -903,7 +1067,7 @@ CARTAS BELLEZA
     outline: none;
   }
 
-  .formulario textarea {
+  .formulario-index textarea {
     display: block;
     width: 90%;
     margin-top: 20px;
@@ -913,11 +1077,24 @@ CARTAS BELLEZA
     border-style: hidden;
     outline: none;
   }
-  .formulario .div-inpunts {
+
+
+  .formulario-index .div-inpunts {
     width: 100%;
     
   }
+  #FormAdd .formulario-updade{
+    width: 100%;
+  }
 
+  .formulario-updade a {
+    margin: 0 50%;
+
+  }
+  
+  .formulario-updade #id_photo_as_blob {
+     width:70%; 
+  }
   .contenedor_contenido h2 {
     font-weight: bold;
     font-size: 20px;
@@ -1063,6 +1240,13 @@ CARTAS BELLEZA
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 55px;
+  }
+
+  #FormAdd .formulario-updade{
+    width: 90%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
   }
 
 }

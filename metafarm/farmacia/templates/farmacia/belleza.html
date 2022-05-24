@@ -38,21 +38,27 @@
         </div>
     </header>
     <main class="main wrapper">
+        <div id="contenedor-agregar">
+            <a href="{% url 'addProd' %}" class="btn-agregar">+ agregar productos</a>
+        </div>
         <section id="container-belleza" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
+            {% for prod in productos %}
             <div class="card h-80 bg-light">
                 <!-- put item.userId & item.id below this -->
                 <div class="card-header"></div>
-                <img class="card-img-top" src="{% static 'farmacia/img/sex_img/anticonceptivas-slinda.jpg' %}"
+                <img class="card-img-top" src="{{prod.photo_as_blob.url}}"
                     alt="Card image cap">
-                <div class="card-title"></div>
+                <div class="card-title">{{prod.nombreProd}}</div>
                 <div class="card-body">
-                    <p class="card-text"></p>
-                    <p class="card-text2"></p>
-                    <p class="card-text3"></p>
+                    <p class="card-text">{{prod.descripEspecifica}}</p>
+                    <p class="card-text2">{{prod.unidades}}</p>
+                    <p class="card-text3">{{prod.desc}}</p>
                 </div>
-                <div class="card-price"></div>
+                <div class="card-price">${{prod.price}} c/u</div>
                 <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
+                <hr>
             </div>
+            {% endfor %}
         </section>
     </main>
     <!-- todo pabajo futer mano -->
@@ -127,9 +133,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9aec3b5dab.js" crossorigin="anonymous"></script>
-    <script src="/HTML5/JS/validatciones.js"></script>
     <script src="{% static 'farmacia/JS/validatciones.js' %}"></script>
-    <script src="/HTML5/JS/jqueryJson.js"></script>
     <script src="{% static 'farmacia/JS/jqueryJson.js' %}"></script>
 </body>
 </html>
