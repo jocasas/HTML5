@@ -1,0 +1,243 @@
+[
+    {
+        "categoriaCarta": 1,
+        "numCarta": 1,
+        "img": "/static/farmacia/img/med_img/Paracetamol_500MG_16C_BE_HD.jpg",
+        "nombreProd": "PARACETAMOL",
+        "body": "Paracetamol(B) 500MG",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 879
+    },
+    {
+        "categoriaCarta": 1,
+        "numCarta": 2,
+        "img": "/static/farmacia/img/med_img/diclofenaco.jpg",
+        "nombreProd": "DICLOFENACO",
+        "body": "Diclofenaco 50 MG",
+        "unidades": "10 COMPRIMIDOS",
+        "desc":"",
+        "price": 1677
+    },
+    {
+        "categoriaCarta": 1,
+        "numCarta": 3,
+        "img": "/static/farmacia/img/med_img/tapsin.jpg",
+        "nombreProd": "TAPSIN FORTE",
+        "body": "Tapsin Forte 650 MG",
+        "unidades": "20 COMPRIMIDOS",
+        "desc":"",
+        "price": 2700
+    },
+    {
+        "categoriaCarta": 1,
+        "numCarta": 4,
+        "img": "/static/farmacia/img/med_img/abrilar.jpg",
+        "nombreProd": "ABRILAR",
+        "body": "Abrilar Jarabe 100 ML",
+        "unidades": "16 COMPRIMIDOS",
+        "desc":"",
+        "price": 3599
+    },
+    {
+        "categoriaCarta": 1,
+        "numCarta": 5,
+        "img": "/static/farmacia/img/med_img/amoxilina.jpg",
+        "nombreProd": "AMOXICILINA",
+        "body": "Amoxcilina(B) 500 MG",
+        "unidades": "21 COMPRIMIDOS",
+        "desc":"",
+        "price": 4311
+    },
+    {
+        "categoriaCarta": 1,
+        "numCarta": 6,
+        "img": "/static/farmacia/img/med_img/armonyl.jpg",
+        "nombreProd": "ARMONYL",
+        "body": "Armonyl 36 MG",
+        "unidades": "20 COMPRIMIDOS",
+        "desc":"",
+        "price": 2639
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 1,
+        "img": "/static/farmacia/img/mas_img/adulto_pequeña.jpg",
+        "nombreProd": "FIT FORMULA",
+        "body": "Adulto Raza Pequeña",
+        "unidades": "10Kg",
+        "desc":"Alimento completo y balanceado desarrollado con ingredientes de alta digestibilidad.",
+        "price": 19990
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 2,
+        "img": "/static/farmacia/img/mas_img/light.jpg",
+        "nombreProd": "FIT FORMULA",
+        "body": "Adulto Light",
+        "unidades": "20Kg",
+        "desc":"Un 25% menos de materia grasa total.Mayor aporte de ácidos grasos esenciales Omega 3, que ayudan a disminuir la inflamación crónica.",
+        "price": 39990
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 3,
+        "img": "/static/farmacia/img/mas_img/senior.jpg",
+        "nombreProd": "FIT FORMULA",
+        "body": "Adulto Senior",
+        "unidades": "20Kg",
+        "desc":"Proteínas de alta calidad y digestibilidad, para preservar su masa muscular.Mayor porcentaje de fibra, para facilitar el tránsito intestinal.",
+        "price": 39990
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 4,
+        "img": "/static/farmacia/img/mas_img/oftavet.jpg",
+        "nombreProd": "OFTAVET",
+        "body": "Oftavet (Ciprofloxacino)",
+        "unidades": "5ML",
+        "desc":"Antibiótico de uso tópico indicado para tratar infecciones oculares superficiales y profundas del ojo y sus anexos, incluyendo úlceras corneales infectadas con bacterias sensibles a la droga.",
+        "price": 17790
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 5,
+        "img": "/static/farmacia/img/mas_img/APETICAT.jpg",
+        "nombreProd": "APETICAT",
+        "body": "Apeticat Jarabe",
+        "unidades": "100ml",
+        "desc":"Suplemento vitamínico con Taurina - Carnitina para gatos.",
+        "price": 9800
+    },
+    {
+        "categoriaCarta": 2,
+        "numCarta": 6,
+        "img": "/static/farmacia/img/mas_img/Invermic.jpg",
+        "nombreProd": "INVERMIC",
+        "body": "Invermic Gatos Levamisol",
+        "unidades": "2% Gotas 10 mL",
+        "desc":"Potente antihelmíntico de uso oral y acción sistémica, en dosis única elimina las formas larvarias y adultas de nematodos del tracto gastrointestinal y de las vías respiratorias.",
+        "price": 2790
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 1,
+        "img": "/static/farmacia/img/sex_img/anticonceptivas-slinda.jpg",
+        "nombreProd": "Slinda",
+        "body": "Anticonceptivas Slinda Com.Rec.",
+        "unidades": "28 Comprimidos",
+        "desc":"Forma Farmaceutica: COMPRIMIDOS RECUBIERTOS Dosis por Forma Farmaceutica: 4mg",
+        "price": 16990
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 2,
+        "img": "/static/farmacia/img/sex_img/anticonceptivas-tinelle.jpg",
+        "nombreProd": "Tinelle",
+        "body": "Tinelle 21mg/0.03mg 91Com.Rec.",
+        "unidades": "91 Comprimidos",
+        "desc":"Principio Activo: Dienogest / Etinilestradiol / Forma Farmaceutica: Comprimidos Recubiertos / Dosis por Forma Farmaceutica: 2mg ; 0.03mg",
+        "price": 31990
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 3,
+        "img": "/static/farmacia/img/sex_img/estimulante-YES!-HOT.jpg",
+        "nombreProd": "YES!-HOT",
+        "body": "Estimulante YES!-HOT",
+        "unidades": "55ml",
+        "desc":"YES! Hot, tiene una sugerente sensacion de calor que ayuda a estimular la zona vaginal. Favorece la lubricación en la relación sexual de forma segura ya que es hipoalergénico y no modifica el pH fisiológico de la zona.",
+        "price": 6490
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 4,
+        "img": "/static/farmacia/img/sex_img/estimulante-YES!-ICE.jpg",
+        "nombreProd": "YES!-ICE",
+        "body": "Estimulante YES!-ICE",
+        "unidades": "55ml",
+        "desc":"Gel lubricante sexual con agente refrescante. Favorece la lubricación y sensibilidad de la zona vaginal antes y/o durante la relación sexual de forma segura, sin modificar el pH fisiológico.",
+        "price": 6490
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 5,
+        "img": "/static/farmacia/img/sex_img/durex-max-placer.jpg",
+        "nombreProd": "Durex",
+        "body": "Preservativo Máximo Placer",
+        "unidades": "3 Unidades",
+        "desc":"Durex máximo Placer es un preservativo texturizado con puntos y estrías. Aseguran una mayor estimulación para ti y tu pareja. Están anatómicamente diseñados y texturizados para máximo placer.",
+        "price": 4990
+    },
+    {
+        "categoriaCarta": 3,
+        "numCarta": 6,
+        "img": "/static/farmacia/img/sex_img/lifeStyles-ultra-sensible-nuda.jpg",
+        "nombreProd": "LifeStyles",
+        "body": "Preservativos Nuda",
+        "unidades": "12 Unidades",
+        "desc":"Preservativo de látex más delgado, lo cual otorga una mayor sensibilidad provocando así una sensación más natural.",
+        "price": 7990
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 1,
+        "img": "/static/farmacia/img/bell_img/Agua-micelar-Loreal.jpg",
+        "nombreProd": "Agua Micelar",
+        "body": "Agua Micelar Hialurónico 200 Ml",
+        "unidades": "200ml",
+        "desc":"Nueva Agua Micelar Hidratante Revitalift Ácido Hialurónico. Limpia sin resecar, desmaquilla eficazmente y rellena la piel con hidratación.",
+        "price": 4590
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 2,
+        "img": "/static/farmacia/img/bell_img/Mascarilla-Revitalift.jpg",
+        "nombreProd": "Revitalift",
+        "body": "Tissue Revitalift Ácido Hialurónico",
+        "unidades": "1 Unidad",
+        "desc":"Marcarilla Revitalift Ácido Hialurónico de L'Oréal Paris. Mascarilla en tela de hidratación intensa con ácido hialurónico puro.",
+        "price": 3190
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 3,
+        "img": "/static/farmacia/img/bell_img/Colorante-Cabello-Rojo.jpg",
+        "nombreProd": "Tintura Cobrizo Rubí",
+        "body": "Tintura Nutrisse N°6646 Cobrizo Rubí",
+        "unidades": "1 Unidad",
+        "desc":"Coloración Nutrisse con todo el poder de sus 4 aceites (palta, uva, oliva y grosella) y su gota nutritiva para un cabello nutrido y mejor color.",
+        "price": 6190
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 4,
+        "img": "/static/farmacia/img/bell_img/Colorante-Cabello-Rubio.jpg",
+        "nombreProd": "Tintura Rubio Ceniza",
+        "body": "Tintura Cor Intensa N° 8,1 Rubio Ceniza",
+        "unidades": "1 Unidad",
+        "desc":"La fórmula hidratante de Cor Intensa garantiza la máxima hidratación y un color perfecto. Con textura cremosa y aroma floral, su aplicación es fácil y agradable.",
+        "price": 2690
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 5,
+        "img": "/static/farmacia/img/bell_img/Esmalte-Color-Piel.jpg",
+        "nombreProd": "Esmalte Palo Rosa 24",
+        "body": "Esmalte Super Fantastic Palo Rosa 24 Vogue",
+        "unidades": "10ml",
+        "desc":"Esmalte de la colección fantastic, con maximo brillo y pincel plano.",
+        "price": 1990
+    },
+    {
+        "categoriaCarta": 4,
+        "numCarta": 6,
+        "img": "/static/farmacia/img/bell_img/Esmalte-Color-Transparente.jpg",
+        "nombreProd": "Tratamiento Uñas",
+        "body": "Tratamiento Uñas Pro Fortalecimiento",
+        "unidades": "10ml",
+        "desc":"Esmalte con pincel plano de alta cobertura.",
+        "price": 2690
+    }
+    
+]
