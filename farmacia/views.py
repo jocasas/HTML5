@@ -71,7 +71,7 @@ def mod (request, id):
         'Agregar':Tabla_agregar(instance= productos)
     }
     if(request.method == 'POST'):
-        varModificar = Tabla_agregar(data=request.POST, instance=productos)
+        varModificar = Tabla_agregar(request.POST, request.FILES ,instance=productos)
         if varModificar.is_valid():
             varModificar.save()
             messages.success(request,"modificado correctamente")
