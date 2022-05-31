@@ -499,19 +499,12 @@ PAGINAS CARDS .CLONE()
 CONTAINER ACTUALES: MEDICAMENTOS,MASCOTAS 
 
 */
-#btn-mod{
+#btn-mod, #btn-del{
   text-decoration: none;
   color: #5c5c5c;
   font-size: 2rem;
   position: relative;
-}
-
-#btn-del {
-  text-decoration: none;
-  color: #5c5c5c;
-  font-size: 2rem;
-  position: relative;
-  
+  border: none;
 }
 
 .btns-up-del {

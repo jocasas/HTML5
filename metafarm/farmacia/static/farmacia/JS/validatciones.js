@@ -1,3 +1,4 @@
+
 /*---------------BOOOTSTRAP-----------------------------*/
 (function () {
   'use strict'
@@ -9,11 +10,25 @@
           event.preventDefault()
           event.stopPropagation()
         }
-
-        form.classList.add('was-validated')
       }, false)
     })
 })()
+
+function deletes (idProducto) {
+  swal.fire({
+    "title" : "estas seguro?",
+    "text" : "esta accion no se puede deshacer",
+    "icon" : "question",
+    "showCancelButton" : true,
+    "cancelButtonText" : "cancelar",
+    "confirmButtonText" : "eliminar"
+  })
+  .then(function(result){
+    if(result.isConfirmed) {
+          window.location.href = "/delete/" + idProducto
+    }
+  })
+}
 
 
 /* ---------------------------------------------------------- */
@@ -31,7 +46,7 @@ $(document).ready(function () {
     }
 
   });
-
+  
   $("#btn-login").click(function (event) {
     var contrasenna = $("#contrasenna-login").val();
     if (contrasenna == "") {
