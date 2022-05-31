@@ -1,8 +1,10 @@
+
 from django.shortcuts import render, redirect
 from .models import Producto
 from .forms import Tabla_agregar
-from tkinter import *
-from tkinter import messagebox as MessageBox
+from django.contrib import messages
+
+
 
 
 
@@ -72,6 +74,7 @@ def mod (request, id):
         varModificar = Tabla_agregar(data=request.POST, instance=productos)
         if varModificar.is_valid():
             varModificar.save()
+            messages.success(request,"modificado correctamente")
         return redirect(to='home')
     return render (request,'farmacia/update.html',datos)
     
@@ -79,14 +82,10 @@ def mod (request, id):
 #ELIMINAR
 
 def delete (request,id):
-    resultado = MessageBox.askokcancel("Salir", 
-    "¿Esta seguro(a) de eliminar este producto?")
-    if resultado == True:
-        productos = Producto.objects.get(idProducto = id)
-        productos.delete()
-        return redirect (to='home')
-    else:
-        return redirect (to='home')
+    messages.success(request,"eliminado correctamente")
+    productos = Producto.objects.get(idProducto = id)
+    productos.delete()
+    return redirect(to='home')
 
 #======================================================================================
 #AGREGAR FOTO MEDIANTE FORMULARIO
@@ -98,7 +97,6 @@ def add(request):
         varFomulario = Tabla_agregar(request.POST,request.FILES)
         if varFomulario.is_valid():
             varFomulario.save() #insert a la base de datos
-            datos['exito'] = 'Producto guardado con exito'#mensaje de existo
         else: 
             #mensaje de error
             datos['error'] = 'Producto NO guardado'

@@ -37,6 +37,7 @@
             </nav>
         </div>
     </header>
+    <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
     <main class="main wrapper">
         <div id="contenedor-agregar">
             <a href="{% url 'addProd' %}" class="btn-agregar">+ agregar productos</a>
@@ -47,7 +48,7 @@
                 <!-- put item.userId & item.id below this -->
                 <div class="card-header"></div>
                 <div class="btns-up-del">
-                    <a id="btn-del" class="fa-solid fa-trash-can" href="{% url 'delete' prod.idProducto %}"></a>
+                    <a id="btn-del" class="fa-solid fa-trash-can" href="#" onclick="deletes({{prod.idProducto}})"></a>
                     <a id="btn-mod" class="fa-solid fa-gear" href="{% url 'mod' prod.idProducto %}"></a>
                 </div>
                 <img class="card-img-top" src="{{prod.photo_as_blob.url}}"
@@ -140,6 +141,28 @@
     <script src="https://kit.fontawesome.com/9aec3b5dab.js" crossorigin="anonymous"></script>
     <script src="{% static 'farmacia/JS/validatciones.js'%}"></script>
     <script src="{% static 'farmacia/JS/jqueryJson.js'%}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% block js %}
+        <script>
+            function deletes (idProducto) {
+                swal.fire({
+                  "title" : "estas seguro?",
+                  "text" : "esta accion no se puede deshacer",
+                  "icon" : "question",
+                  "showCancelButton" : true,
+                  "cancelButtonText" : "cancelar",
+                  "confirmButtonText" : "eliminar"
+                })
+                .then(function(result){
+                  if(result.isConfirmed) {
+                        window.location.href = "/delete/" + idProducto
+                  }
+                })
+            }
+
+        </script>
+    {% endblock %}
 </body>
 
 </html>
