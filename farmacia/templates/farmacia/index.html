@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'farmacia/CSS/Style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/cssfont-awesome.min.css">
+
+    <title>Farmacia</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <div>
+                    <a href="{% url 'home' %}"><img src="{% static 'farmacia/img/logoverde.png.png' %}" alt="imagen_logo" class="logo" /></a>
+                </div>
+                <input type="checkbox" id="check" />
+                <label for="check" class="bar-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-menu wrapper">
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#">Hacer Pedido</a></li>
+                    <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
+    <i class="fa-light fa-angle-up"></i>
+    <main class="main wrapper">
+        <section class="">
+            <h2 class="titulos">OFERTAS DE LA SEMANA</h2>
+            <br />
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'farmacia/img/baner_1.png' %}" class="d-block w-100" alt="baner_promocion1" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'farmacia/img/baner_2.png' %}" class="d-block w-100" alt="baner_promocion2" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'farmacia/img/baner_3.png' %}" class="d-block w-100" alt="baner_promocion3" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'farmacia/img/baner_4.png' %}" class="d-block w-100" alt="baner_promocion4" />
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <a name="categorias"></a>
+        <h2 class="titulos">CATEGORIAS DE PRODUCTOS</h2>
+        <br />
+        <section class="categorias">
+            <div class="row row-cols-2 row-cols-md-4 g-4">
+                <div class="col">
+                    <a href="{% url 'catmasc' %}" class="card h-80">
+                        <img src="{% static 'farmacia/img/download.jpg' %}" class="card-img-top" alt="mascotas" />
+                        <div class="card-body">
+                            <h5 class="card-title">Mascotas</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'catmedi' %}" class="card h-80">
+                        <img src="{% static 'farmacia/img/medicament-que-es.jpg' %}" class="card-img-top" alt="medicamentos" />
+                        <div class="card-body">
+                            <h5 class="card-title">Medicamentos</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'catsexu' %}" class="card h-80">
+                        <img src="{% static 'farmacia/img/logo_sexualidad.jpg' %}" class="card-img-top" alt="sexualidad" />
+                        <div class="card-body">
+                            <h5 class="card-title">Cuidado Personal</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="{% url 'catbell' %}" class="card h-80">
+                        <img src="{% static 'farmacia/img/images.jpg' %}" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Belleza</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <H2>SUCURSALES</H2>
+        <table class="table table-hover" id="tablasuc">
+            <thead>
+                <tr>
+                    <th class="col">Nombre sucursal</th>
+                    <th class="col">Direccion Sucursal</th>
+                    <th class="col">Comuna</th>
+                    <th class="col">Hora de atencion</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sucur in sucursales %}
+                <tr>
+                    <td>{{sucur.Nombre}}</td>
+                    <td>{{sucur.Direccion}}</td>
+                    <td>{{sucur.idComuna}}</td>
+                    <td>{{sucur.Horario}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <H2>PRODUCTOS</H2>
+        <section id="container-productos" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
+            {% for prod in productos %}
+            <div class="card h-80 bg-light">
+                <!-- put item.userId & item.id below this -->
+                <div class="card-header"></div>
+                <img class="card-img-top" src="{{prod.photo_as_blob.url}}"
+                    alt="Card image cap">
+                <div class="card-title">{{prod.nombreProd}}</div>
+                <div class="card-body">
+                    <p class="card-text">{{prod.descripEspecifica}}</p>
+                    <p class="card-text2">{{prod.unidades}}</p>
+                    <p class="card-text3">{{prod.desc}}</p>
+                </div>
+                <div class="card-price">${{prod.price}} c/u</div>
+                <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+    <form class="formulario-index needs-validation" novalidate>
+        <h3>CONTACTO</h3>
+        <div class="div-inpunts wrapper">
+            <div>
+                <input type="text" name="nombre" class="form-control" id="validationcustom01" placeholder="Nombre"
+                    required />
+                <div class="invalid-feedback">Ingrese su nombre!</div>
+            </div>
+            <div>
+                <input type="email" name="correo" class="form-control" id="validationcustom02" placeholder="Correo"
+                    required />
+                <div class="invalid-feedback">Ingrese su Correo!</div>
+            </div>
+            <div class="formareatexto">
+                <textarea name="mensaje" class="form-control" id="validationcustom03"
+                    placeholder="Escriba su mensaje aqui" required></textarea>
+                <div>
+                    <div class="invalid-feedback">Debe ingresar un comentario!</div>
+                </div>
+            </div>
+            <div class="botoncontacto">
+                <button type="submit" id="botonenvio">Enviar</button>
+            </div>
+        </div>
+    </form>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <form id="formfooter">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-auto mb-4 mb-md-0">
+                        <p class="pt-2">
+                            <strong>Suscríbete con nosotros</strong>
+                        </p>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-5 col-12 mb-4 mb-md-0">
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form5Example25" class="form-control" />
+                            <label class="form-label" for="form5Example25">Direccion de correo</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-auto mb-4 mb-md-0">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary mb-4">
+                            Suscribirse
+                        </button>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </form>
+        </div>
+        <!-- Grid container -->
+        <!-- Footer -->
+        <div class="fotersito">
+            <div class="fotercol1"> 
+                <p>Av Siempre Viva, N°304.</p>
+            </div>
+            <div class="foter-red">
+                <p>Redes Sociales</p>
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            </div>
+            <div class="fotercol2">
+                <p>+56 9 8456 4232</p>
+            </div>
+            <div class="fotercol3">
+                <p>Derechos reservados®</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9aec3b5dab.js" crossorigin="anonymous"></script>
+    <script src="{% static 'farmacia/JS/validatciones.js' %}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% if messages %}
+        {% for m in messages %}
+            <script>
+                swal.fire({
+                    "title" : "Exito",
+                    "text" : "{{m}}",
+                    "icon" : "success"
+                })
+            </script>  
+        {% endfor %}
+    {% endif %} 
+    <!-- EL INDEX NO OCUPA jqueryJSON.js conflicto cartas == same class -->
+</body>
+
+</html>
