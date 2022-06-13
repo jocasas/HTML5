@@ -110,8 +110,11 @@
             </div>
         </section>
         <H2>SUCURSALES</H2>
+        {% for reg in region %}
         <table class="table table-hover" id="tablasuc">
-            <thead>
+            <thead> 
+                <br>
+                <h4>{{reg.nomRegion}}</h4>
                 <tr>
                     <th class="col">Nombre sucursal</th>
                     <th class="col">Direccion Sucursal</th>
@@ -120,16 +123,34 @@
                 </tr>
             </thead>
             <tbody>
-                {% for sucur in sucursales %}
-                <tr>
-                    <td>{{sucur.Nombre}}</td>
-                    <td>{{sucur.Direccion}}</td>
-                    <td>{{sucur.idComuna}}</td>
-                    <td>{{sucur.Horario}}</td>
-                </tr>
+            {% if reg.nomRegion == "Valparaiso" %}
+
+                {% for val in sucursalesVal %}
+                    <tr>
+                        <td>{{val.Nombre}}</td>
+                        <td>{{val.Direccion}}</td>
+                        <td>{{val.idComuna}}</td>
+                        <td>{{val.Horario}}</td>
+                    </tr>
+                    
                 {% endfor %}
+            
+            {% elif reg.nomRegion == "Metropolitana" %}
+        
+                {% for met in sucursalesMet %}
+                    <tr>
+                        <td>{{met.Nombre}}</td>
+                        <td>{{met.Direccion}}</td>
+                        <td>{{met.idComuna}}</td>
+                        <td>{{met.Horario}}</td>
+                    </tr>
+
+                {% endfor %}
+            
+            {% endif %}
             </tbody>
         </table>
+        {% endfor %}
         <H2>PRODUCTOS</H2>
         <section id="container-productos" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
             {% for prod in productos %}

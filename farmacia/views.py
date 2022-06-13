@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, redirect
-from .models import Producto,Sucursal
+from .models import Comuna,Region,Producto,Sucursal
 from .forms import Tabla_agregar
 from django.contrib import messages
 
@@ -13,10 +13,17 @@ from django.contrib import messages
 ##VIEWS INDEX
 def home(request):
     productos = Producto.objects.all()
-    sucursales = Sucursal.objects.all()
+    region = Region.objects.all()
+    comuna = Comuna.objects.all()
+    sucursalesVal = Sucursal.objects.filter(idComuna__in = [1,2,3])
+    sucursalesMet = Sucursal.objects.filter(idComuna__in = [5,6,7])
+    
     datos = {
         'productos':productos ,
-        'sucursales':sucursales
+        'sucursalesVal':sucursalesVal ,
+        'sucursalesMet':sucursalesMet ,
+        'region':region ,
+        'comuna':comuna
     }
     return render (request,'farmacia/index.html',datos)
 def log(request):
