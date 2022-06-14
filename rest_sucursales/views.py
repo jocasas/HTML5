@@ -1,16 +1,19 @@
 from operator import methodcaller
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view,permission_classes
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from farmacia.models import Sucursal
 from rest_sucursales.serializer import SucursalSerializer
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 @csrf_exempt
 @api_view(['GET','POST'])
+@permission_classes((IsAuthenticated,))
 def lista_sucursales(request):
     if request.method == 'GET':
         listaSucursales = Sucursal.objects.all()
@@ -26,6 +29,7 @@ def lista_sucursales(request):
             return Response(serializer.data, status = status.HTTP_400_BAD_REQUEST)
         
 @api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))
 def detalle_sucursal(request,id):
     try:
         sucursal = Sucursal.objects.get(numSucursal=id)

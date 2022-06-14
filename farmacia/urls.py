@@ -14,7 +14,7 @@ urlpatterns = [
     path('agregarProducto/',add,name="addProd"),
     path('mod/<id>',mod,name="mod"),
     path('delete/<id>',delete,name="delete"),
-    path('API', include('rest_sucursales.urls')),
+    path('API/', include('rest_sucursales.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
