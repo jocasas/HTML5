@@ -31,7 +31,15 @@
                     <li><a href="{% url 'home' %}">Inicio</a></li>
                     <li><a href="#categorias">Categorias</a></li>
                     <li><a href="#">Hacer Pedido</a></li>
-                    <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    {% if request.user.is_authenticated %}
+                    {% else %}
+                        <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <li><span><a><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                        <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                    {% else %}
+                    {% endif %}
                 </ul>
             </nav>
         </div>
@@ -40,6 +48,7 @@
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
     <i class="fa-light fa-angle-up"></i>
     <main class="main wrapper">
+    {% block space %}
         <section class="">
             <h2 class="titulos">OFERTAS DE LA SEMANA</h2>
             <br />
@@ -109,6 +118,71 @@
                 </div>
             </div>
         </section>
+        <H2>SUCURSALES</H2>
+        {% if request.user.is_staff %}
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetext" aria-expanded="false" aria-controls="collapsetext">
+              Agregar Sucursal
+            </button>
+        </p>
+        
+        <div class="collapse" id="collapsetext">
+             <form action="" method="POST">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" name="Guardar">
+             </form>
+        </div>
+        {% endif %}
+        {% for reg in region %}
+        <table class="table table-hover" id="tablasuc">
+            <thead> 
+                <br>
+                <h4>{{reg.nomRegion}}</h4>
+                <tr>
+                    <th class="col">Nombre sucursal</th>
+                    <th class="col">Direccion Sucursal</th>
+                    <th class="col">Comuna</th>
+                    <th class="col">Hora de atencion</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if reg.nomRegion == "Valparaiso" %}
+
+                {% for val in sucursalesVal %}
+                    <tr>
+                        <td>{{val.Nombre}}</td>
+                        <td>{{val.Direccion}}</td>
+                        <td>{{val.idComuna}}</td>
+                        <td>{{val.Horario}}</td>
+                        {% if request.user.is_staff %}
+                        <td><a href="{% url 'update' val.numSucursal %}" class= "btn btn-info">Modifiar<a/><td>
+                        <td><a href="eliminarSucursal/{{val.numSucursal}}" class= "btn btn-danger">Eliminar<a/><td>            
+                        {% endif %}
+                    </tr>
+                    
+                {% endfor %}
+            
+            {% elif reg.nomRegion == "Metropolitana" %}
+        
+                {% for met in sucursalesMet %}
+                    <tr>
+                        <td>{{met.Nombre}}</td>
+                        <td>{{met.Direccion}}</td>
+                        <td>{{met.idComuna}}</td>
+                        <td>{{met.Horario}}</td>
+                        {% if request.user.is_staff %}
+                        <td><a href="{% url 'update' met.numSucursal %}" class= "btn btn-info">Modifiar<a/><td>
+                        <td><a href="eliminarSucursal/{{met.numSucursal}}" class= "btn btn-danger">Eliminar<a/><td> 
+                        {% endif %}
+                    </tr>
+
+               {% endfor %}
+               
+            {% endif %}
+            </tbody>
+        </table>
+        {% endfor %}
         <H2>PRODUCTOS</H2>
         <section id="container-productos" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
             {% for prod in productos %}
@@ -210,11 +284,11 @@
             </div>
         </div>
     </footer>
+    {% endblock space %}
     <!-- Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9aec3b5dab.js" crossorigin="anonymous"></script>
     <script src="{% static 'farmacia/JS/validatciones.js' %}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

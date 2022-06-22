@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TipoProducto, Producto
+from .models import TipoProducto, Producto, Region, Comuna, Sucursal
 from django.utils.html import format_html
 
 # Register your models here.
@@ -22,3 +22,6 @@ class PersonAdmin (admin.ModelAdmin):
 
 admin.site.register(TipoProducto)
 admin.site.register(Producto, PersonAdmin)
+admin.site.register(Region)
+admin.site.register(Comuna)
+admin.site.register(Sucursal)

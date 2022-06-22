@@ -1,0 +1,11 @@
+{% extends "./index.html" %}
+{% load static %}
+{% block space %}
+<div>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" name="Guardar">
+</form>
+</div>
+{% endblock space %}

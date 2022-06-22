@@ -966,7 +966,30 @@ CSS Carussel
   border-radius: 40px;
 }
 
-/*
+
+/* CSS tablita sucursales en el index*/
+#tablasuc{
+  background-color: white;
+}
+
+.google_containter .btn{
+  border-radius: 20px;
+}
+
+.google_img{
+  width: 10%;
+  margin-right: 10px;
+}
+
+.google_btn {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+ /*
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

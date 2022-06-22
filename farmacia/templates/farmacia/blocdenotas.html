@@ -1,0 +1,69 @@
+<div class="contenedor_formulario">
+    <h2>Registro</h2>
+    <form method="POST" id="form_registro">
+      {% csrf_token %}
+        
+        <div id="usuario">
+        {{form.username.label}}
+        {{form.username}}
+        </div>
+
+        <div id="usuario"> 
+        {{form.email.label}}
+        {{form.email}}
+        </div>
+
+        <div id="usuario">
+        {{form.password1.label}}
+        {{form.password1}}
+        </div>
+
+        <div id="usuario">
+        {{form.password2.label}}
+        {{form.password2}}
+        </div>
+        
+        <div class="input">
+            <button id="bt_reg" type="submit">
+                <span class="titulo_boton">Registrarme</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+-------------------------------
+
+<div class="contenedor_formulario">
+    <h2>Registro</h2>
+
+    <form method="POST" id="form_registro">
+      {% csrf_token %}
+
+        <div class="input">
+            <span>Usuario:</span>
+            {{form.username}}
+            <div id="error1" class="errores">Usuario debe ser entre 3-9 caracteres</div>
+        </div>
+        <div class="input">
+            <span>Correo:</span>
+            {{form.email}}
+            <div id="error2" class="errores">Formato de Correo invalido</div>
+        </div>
+        <div class="input">
+            <span>Contraseña:</span>
+            {{form.password1}}
+            <div id="error3" class="errores">La contraseña debe ser entre 3-9 caracteres</div>
+        </div>
+        <div class="input">
+          <span>Repita Contraseña:</span>
+          {{form.password2}}
+          <div id="error4"  class="errores">Las contraseñas no coinciden</div>
+        </div>
+        <div class="input">
+            <button id="bt_reg" type="submit">
+                <span class="titulo_boton">Registrarme</span>
+            </button>
+        </div>
+    </form>
+    
+</div>
