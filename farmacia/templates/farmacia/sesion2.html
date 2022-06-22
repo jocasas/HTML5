@@ -23,17 +23,18 @@
                 </div>
                 <div class="contenedor_formulario">
                   <h2>Iniciar Sesion</h2>
-                      <form id="form_login">
+                      <form method="POST" id="form_login">
+                        {% csrf_token %}
                             <div class="input">
                                 <span>Usuario:</span>
-                                <input type="text" id="usuario-login" class="usuario-login" >
+                                <input type="text" id="usuario-login" class="usuario-login" name="username" >
                                 <div class="error" id="error_usuario_log">
                                     Debe ingresar un usuario!
                                 </div>
                             </div>
                             <div class="input">
                                 <span>Contraseña:</span>
-                                <input type="password" id="contrasenna-login" class="contrasenna" >
+                                <input type="password" id="contrasenna-login" class="contrasenna" name="password">
                                 <div class="error" id="error_contrasenna_log">
                                     Debe ingresar una contraseña!
                                 </div>
@@ -43,6 +44,11 @@
                                     <span class="titulo_boton">ingresar</span>
                                 </button>
                             </div>
+                            
+                            {% for message in messages %}
+                                <p id="messages">{{message}}</p>
+                            {% endfor %}
+                            
                             <div class="registrarme_login">
                                 <p>No tienes cuenta?
                                     <a href="{% url 'reg' %}"> Registrate Aqui</a>

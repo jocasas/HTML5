@@ -33,15 +33,19 @@
                     <li><a href="{% url 'home' %}">Categorias</a></li>
                     <li><a href="#">Hacer Pedido</a></li>
                     <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    <li><span>Hola, {{request.user}}</span></li>
+                    <li><span><a href="{% url 'logout' %}">Logout</a></span></li>
                 </ul>
             </nav>
         </div>
     </header>
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
     <main class="main wrapper">
+        {% if request.user.is_staff %}
         <div id="contenedor-agregar">
             <a href="{% url 'addProd' %}" class="btn-agregar">+ agregar productos</a>
         </div>
+        {% endif %}
         <section id="container-mascotas" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
             {% for prod in productos %}
             <div class="card h-80 bg-light">

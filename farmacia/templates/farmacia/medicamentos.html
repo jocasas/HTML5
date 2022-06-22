@@ -33,6 +33,8 @@
                     <li><a href="{% url 'home' %}">Categorias</a></li>
                     <li><a href="#">Hacer Pedido</a></li>
                     <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    <li><span>Hola, {{request.user}}</span></li>
+                    <li><span><a href="{% url 'logout' %}">Logout</a></span></li>
                 </ul>
             </nav>
         </div>
