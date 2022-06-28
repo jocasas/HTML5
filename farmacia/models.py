@@ -23,3 +23,36 @@ class Producto (models.Model):
 
     def __str__(self):
         return self.nombreProd
+
+
+
+# REGION -> COMUNA -> SUCURSAL
+class Region (models.Model):
+    
+    idRegion = models.IntegerField(primary_key=True,verbose_name='Id de Region')
+    nomRegion = models.CharField(max_length=40,verbose_name='Nombre region')
+    
+    def __str__(self):
+        return self.nomRegion
+
+class Comuna (models.Model):
+    
+    idComuna = models.IntegerField(primary_key=True,verbose_name='Id de Comuna')
+    nomComuna = models.CharField(max_length=40,verbose_name='Nombre Comuna')
+    IdRegion = models.ForeignKey(Region, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.nomComuna
+
+class Sucursal (models.Model):
+    
+    numSucursal = models.AutoField(primary_key=True, verbose_name='Numero Sucursal')
+    Nombre = models.CharField(max_length=40, verbose_name='Nombre de la Sucursal')
+    Direccion = models.CharField(max_length=60, verbose_name='Direccion')
+    Horario= models.CharField(max_length=60, verbose_name='Abierto')
+    idComuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return self.Nombre
+    

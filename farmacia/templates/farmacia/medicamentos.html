@@ -22,7 +22,7 @@
         <div class="wrapper">
             <nav>
                 <div>
-                    <a href="{% url 'home' %}"><img src="{% static 'farmacia/img/logoverde.png.png'%}" alt="imagen_logo" class="logo" /></a>
+                    <a href="{% url 'home' %}"><img src="{% static 'farmacia/img/logoverde.png.png' %}" alt="imagen_logo" class="logo" /></a>
                 </div>
                 <input type="checkbox" id="check" />
                 <label for="check" class="bar-btn">
@@ -30,27 +30,39 @@
                 </label>
                 <ul class="nav-menu wrapper">
                     <li><a href="{% url 'home' %}">Inicio</a></li>
-                    <li><a href="{% url 'home' %}">Categorias</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
                     <li><a href="#">Hacer Pedido</a></li>
-                    <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    {% if request.user.is_authenticated %}
+                    {% else %}
+                        <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <li><span><a><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                        <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                    {% else %}
+                    {% endif %}
                 </ul>
             </nav>
         </div>
     </header>
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
     <main class="main wrapper">
+        {% if request.user.is_staff %}
         <div id="contenedor-agregar">
             <a href="{% url 'addProd' %}" class="btn-agregar">+ agregar productos</a>
         </div>
+        {% endif %}
         <section id="container-productos" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
             {% for prod in productos %}
             <div class="card h-80 bg-light">
                 <!-- put item.userId & item.id below this -->
                 <div class="card-header"></div>
+                {% if request.user.is_staff %}
                 <div class="btns-up-del">
                     <button id="btn-del" class="fa-solid fa-trash-can" href="#" onclick="deletes({{prod.idProducto}})"></button>
                     <a id="btn-mod" class="fa-solid fa-gear" href="{% url 'mod' prod.idProducto %}"></a>
                 </div>
+                {% endif %}
                 <img class="card-img-top" src="{{prod.photo_as_blob.url}}"
                     alt="Card image cap">
                 <div class="card-title">{{prod.nombreProd}}</div>
