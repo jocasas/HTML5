@@ -30,7 +30,7 @@
                 <ul class="nav-menu wrapper">
                     <li><a href="{% url 'home' %}">Inicio</a></li>
                     <li><a href="#categorias">Categorias</a></li>
-                    <li><a href="#">Hacer Pedido</a></li>
+                    <li><a href="{% url 'comp' %}">Hacer Pedido</a></li>
                     {% if request.user.is_authenticated %}
                     {% else %}
                         <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
@@ -122,16 +122,16 @@
         {% if request.user.is_staff %}
         <p>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetext" aria-expanded="false" aria-controls="collapsetext">
-              Agregar Sucursal
+                Agregar Sucursal
             </button>
         </p>
         
         <div class="collapse" id="collapsetext">
-             <form action="" method="POST">
+            <form action="" method="POST">
                 {% csrf_token %}
                 {{form}}
                 <input type="submit" name="Guardar">
-             </form>
+            </form>
         </div>
         {% endif %}
         {% for reg in region %}
@@ -176,9 +176,7 @@
                         <td><a href="eliminarSucursal/{{met.numSucursal}}" class= "btn btn-danger">Eliminar<a/><td> 
                         {% endif %}
                     </tr>
-
-               {% endfor %}
-               
+                {% endfor %}
             {% endif %}
             </tbody>
         </table>
@@ -198,7 +196,7 @@
                     <p class="card-text3">{{prod.desc}}</p>
                 </div>
                 <div class="card-price">${{prod.price}} c/u</div>
-                <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
+                <a href="{% url 'add' prod.idProducto %}" id="btn-productos" class="btn btn-primary">Agregar</a>
             </div>
             {% endfor %}
         </section>

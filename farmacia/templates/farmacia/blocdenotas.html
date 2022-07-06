@@ -1,7 +1,7 @@
 <div class="contenedor_formulario">
     <h2>Registro</h2>
     <form method="POST" id="form_registro">
-      {% csrf_token %}
+        {% csrf_token %}
         
         <div id="usuario">
         {{form.username.label}}
@@ -37,7 +37,7 @@
     <h2>Registro</h2>
 
     <form method="POST" id="form_registro">
-      {% csrf_token %}
+        {% csrf_token %}
 
         <div class="input">
             <span>Usuario:</span>
@@ -55,9 +55,9 @@
             <div id="error3" class="errores">La contraseña debe ser entre 3-9 caracteres</div>
         </div>
         <div class="input">
-          <span>Repita Contraseña:</span>
-          {{form.password2}}
-          <div id="error4"  class="errores">Las contraseñas no coinciden</div>
+            <span>Repita Contraseña:</span>
+            {{form.password2}}
+            <div id="error4"  class="errores">Las contraseñas no coinciden</div>
         </div>
         <div class="input">
             <button id="bt_reg" type="submit">

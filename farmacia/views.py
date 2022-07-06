@@ -1,5 +1,7 @@
 
+from contextlib import redirect_stdout
 from django.shortcuts import render, redirect
+from farmacia.cart import Carrito
 
 from farmacia.decorators import allowed_user, unauthenticated_user
 from .models import Comuna,Region,Producto,Sucursal
@@ -150,6 +152,15 @@ def catmedi(request):
     
     return render (request,'farmacia/medicamentos.html',datos)
 #======================================================================================
+#VIEWS COMPRAS
+def comp(request):
+    productos = Producto.objects.all()
+    datos = {
+        'productos':productos
+    }
+    
+    return render (request,'farmacia/compras.html',datos)
+#======================================================================================
 #MODIFICAR
 def mod (request, id):
     productos = Producto.objects.get(idProducto = id)
@@ -190,3 +201,37 @@ def add(request):
     return render(request,'farmacia/agregarProd.html',datos)
 
 #AGREGAR SUCUR(?)
+
+#======================================================================================
+# AGREGAR A CARRITO
+def add_carrito (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.agregar(productos)
+    return redirect('comp')
+
+#======================================================================================
+# ELIMINAR DE CARRITO
+
+def del_carrito (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.eliminar(productos)
+    return redirect ('comp')
+
+#======================================================================================
+# RESTAR DE CARRITO
+
+def rest_carrito (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.restar(productos)
+    return redirect ('comp')
+
+#======================================================================================
+# LIMPIAR CARRITO
+
+def cln_carrito (request):
+    carrito = Carrito(request)
+    carrito.limpiar()
+    return redirect ('comp')

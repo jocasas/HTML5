@@ -72,7 +72,7 @@
                     <p class="card-text3">{{prod.desc}}</p>
                 </div>
                 <div class="card-price">${{prod.price}} c/u</div>
-                <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
+                <a href="{% url 'add' prod.idProducto %}" id="btn-productos" class="btn btn-primary">Agregar</a>
                 <hr>
             </div>
             {% endfor %}
