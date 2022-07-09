@@ -630,6 +630,12 @@ CARTAS MASCOTAS
 
 }
 
+.tabla_compras{
+  display: flex;
+  text-align: center;
+  margin-top: 5%;
+}
+
 #contenedor-agregar {
   display: flex;
   width:fit-content;

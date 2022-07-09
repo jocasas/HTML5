@@ -14,6 +14,7 @@ class Carrito:
         id = str(Producto.idProducto)
         if id not in self.carrito.keys():
             self.carrito[id]={
+                "img": Producto.photo_as_blob.url,
                 "producto_id": Producto.idProducto,
                 "nombre": Producto.nombreProd,
                 "descripcion": Producto.descripEspecifica,

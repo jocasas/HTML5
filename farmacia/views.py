@@ -208,6 +208,7 @@ def add_carrito (request, producto_id):
     carrito = Carrito(request)
     productos = Producto.objects.get(idProducto = producto_id)
     carrito.agregar(productos)
+    messages.success(request,"agregado correctamente")
     return redirect('comp')
 
 #======================================================================================
