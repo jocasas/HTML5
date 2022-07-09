@@ -19,6 +19,7 @@ class Producto (models.Model):
     unidades = models.CharField (max_length=20, verbose_name= 'Unidad o medida')
     desc = models.TextField (max_length=500,null=True, blank=True ,verbose_name= 'descripcion')
     price = models.IntegerField (verbose_name='precio')
+    stock = models.IntegerField (default=0, verbose_name='stock')
     IdTipo = models.ForeignKey(TipoProducto, on_delete=models.CASCADE)
 
     def __str__(self):

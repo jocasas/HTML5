@@ -9,6 +9,7 @@ class PersonAdmin (admin.ModelAdmin):
         'idProducto',
         'nombreProd',
         'IdTipo',
+        'stock',
         'imgen',
         
     )
