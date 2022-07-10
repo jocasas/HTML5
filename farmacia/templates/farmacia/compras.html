@@ -51,7 +51,7 @@
                     <th>nombre</th>
                     <th>descripcion</th>
                     <th>Precio</th>
-                    <th>Total x Poducto</th>
+                    <th>SubTotal</th>
                     <th>cantidad</th>
                 </tr>
             </thead>
@@ -120,7 +120,9 @@
 
     <div class="position-absolute start-50 translate-middle-x">
         <a class="btn btn-danger " href="{% url 'cln' %}">limpiar</a>
-        <a class="btn btn-primary " href="">Comprar</a>
+        {% if request.session.carrito.items %}
+            <a class="btn btn-primary" href="{% url 'comprar' %}">Comprar</a>
+        {% endif %}
     </div>
 
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
@@ -140,7 +142,7 @@
                     toast: true,
                     position: 'bottom-end',
                     showConfirmButton: false,
-                    timer: 1500,
+                    timer: 2000,
                     timerProgressBar: true,
                     didOpen: (toast) => {
                         toast.addEventListener('mouseenter', Swal.stopTimer)

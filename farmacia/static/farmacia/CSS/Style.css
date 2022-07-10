@@ -370,6 +370,21 @@ nav {
   height: 70vh;
 }
 
+#messages_error_log{
+  color: red;
+}
+
+.errorlist li{
+  color: red;
+  margin-bottom: 0%;
+}
+
+.contenedor_error_log{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
 .contenedor_formulario {
   width: 50%;
 }

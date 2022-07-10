@@ -1,4 +1,6 @@
 
+from .models import Producto
+
 class Carrito:
     def __init__(self, request):
         self.request = request
@@ -21,7 +23,10 @@ class Carrito:
                 "precio": Producto.price,
                 "acumulado": Producto.price,
                 "cantidad": 1,
+                
             }
+        elif self.carrito[id]["cantidad"] >= int(Producto.stock):
+            self.carrito[id]["cantidad"] = self.carrito[id]["cantidad"]
         else:
             self.carrito[id]["cantidad"] +=1
             self.carrito[id]["acumulado"] +=Producto.price
@@ -48,3 +53,4 @@ class Carrito:
     def limpiar(self):
         self.session["carrito"] = {}
         self.session.modified = True
+        

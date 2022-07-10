@@ -192,6 +192,7 @@
                     <p class="card-text">{{prod.descripEspecifica}}</p>
                     <p class="card-text2">{{prod.unidades}}</p>
                     <p class="card-text3">{{prod.desc}}</p>
+                    <p class="card-text3">({{prod.stock}} Disponibles)</p>
                 </div>
                 <div class="card-price">${{prod.price}} c/u</div>
                 <a href="{% url 'add' prod.idProducto %}" id="btn-productos" class="btn btn-primary">Agregar</a>
@@ -292,10 +293,20 @@
     {% if messages %}
         {% for m in messages %}
             <script>
-                swal.fire({
-                    "title" : "Exito",
-                    "text" : "{{m}}",
-                    "icon" : "success"
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'bottom-end',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    "icon": "success",
+                    "title": "{{m}}"
                 })
             </script>  
         {% endfor %}

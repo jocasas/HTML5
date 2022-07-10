@@ -1,5 +1,5 @@
 from django.urls import path,include
-from.views import add_carrito, cln_carrito, del_carrito, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
+from.views import add_carrito, cln_carrito, comprar, del_carrito, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -29,6 +29,7 @@ urlpatterns = [
     path('agregar/<int:producto_id>', add_carrito, name="add"),
     path('eliminar/<int:producto_id>', del_carrito, name="del"),
     path('restar/<int:producto_id>', rest_carrito, name="rest"),
+    path('comprar/', comprar, name="comprar"),
     path('limpiar/', cln_carrito, name="cln"),
     
 ]

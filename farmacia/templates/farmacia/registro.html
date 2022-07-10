@@ -30,21 +30,25 @@
                         <div class="input">
                             <span>Usuario:</span>
                             {{form.username}}
+                            <p id="messages_error_log">{{form.errors.username}}</p>
                             <div id="error1" class="errores">Usuario debe ser entre 3-9 caracteres</div>
                         </div>
                         <div class="input">
                             <span>Correo:</span>
                             {{form.email}}
+                            <p id="messages_error_log">{{form.errors.email}}</p>
                             <div id="error2" class="errores">Formato de Correo invalido</div>
                         </div>
                         <div class="input">
                             <span>Contraseña:</span>
                             {{form.password1}}
+                            <p id="messages_error_log">{{form.errors.password1}}</p>
                             <div id="error3" class="errores">La contraseña debe ser entre 3-9 caracteres</div>
                         </div>
                         <div class="input">
                           <span>Repita Contraseña:</span>
                           {{form.password2}}
+                          <p id="messages_error_log">{{form.errors.password2}}</p>
                           <div id="error4"  class="errores">Las contraseñas no coinciden</div>
                         </div>
                         <div class="input">
@@ -56,7 +60,7 @@
                     
                 </div>
                 
-                {{form.errors}}
+                
                   <!-- fin formulario -->
               </div>
               <div class="contenedor_img">
