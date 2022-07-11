@@ -1,5 +1,6 @@
 from tabnanny import verbose
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 
@@ -66,6 +67,7 @@ class HistorialCompras (models.Model):
     valTotal = models.IntegerField(verbose_name='Valor Total')
     fechaCompra = models.DateField(verbose_name='Fecha Compra')
     estado = models.CharField(max_length=50, verbose_name='Estado', default='Ordenado')
+    fechallega = models.DateField(default=datetime.today)
     
     
     def __str__(self):

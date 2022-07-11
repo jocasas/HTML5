@@ -269,14 +269,16 @@ def comprar (request):
             username = request.user.username
 
         pluseven = random.randint(1,7)
-        despa = datetime.today() + datetime.timedelta(days=pluseven)
+        plusfecha = datetime.today()
+        despa = plusfecha + timedelta(days=pluseven)
 
         
         HistorialCompras.objects.create(
             Usuario = username,
             Productos = producto,
             valTotal = valor,
-            fechaCompra=datetime.today()
+            fechaCompra=datetime.today(),
+            fechallega=despa
         )
 
         ''' fechaDespacho= despa '''
