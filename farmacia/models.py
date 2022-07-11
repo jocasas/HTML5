@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 
 # Create your models here.
@@ -19,6 +20,7 @@ class Producto (models.Model):
     unidades = models.CharField (max_length=20, verbose_name= 'Unidad o medida')
     desc = models.TextField (max_length=500,null=True, blank=True ,verbose_name= 'descripcion')
     price = models.IntegerField (verbose_name='precio')
+    stock = models.IntegerField (default=0, verbose_name='stock')
     IdTipo = models.ForeignKey(TipoProducto, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -56,3 +58,15 @@ class Sucursal (models.Model):
     def __str__(self):
         return self.Nombre
     
+class HistorialCompras (models.Model):
+    
+    idCompra = models.AutoField(primary_key=True,verbose_name='Codigo Compra')
+    Usuario = models.CharField(max_length=200, verbose_name='Usuario')
+    Productos = models.CharField(max_length=200, verbose_name='Productos Comprados')
+    valTotal = models.IntegerField(verbose_name='Valor Total')
+    fechaCompra = models.DateField(verbose_name='Fecha Compra')
+    estado = models.CharField(max_length=50, verbose_name='Estado', default='Ordenado')
+    
+    
+    def __str__(self):
+        return self.Usuario

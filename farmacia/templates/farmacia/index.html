@@ -30,17 +30,21 @@
                 <ul class="nav-menu wrapper">
                     <li><a href="{% url 'home' %}">Inicio</a></li>
                     <li><a href="#categorias">Categorias</a></li>
-                    <li><a href="#">Hacer Pedido</a></li>
-                    <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
-                    <li><span>Hola, {{request.user}}</span></li>
-                    <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                    <li><a href="{% url 'comp' %}">Hacer Pedido</a></li>
+                    {% if request.user.is_authenticated %}
+                    {% else %}
+                        <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <li><span><a href="{% url 'his' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                        <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                    {% else %}
+                    {% endif %}
                 </ul>
             </nav>
         </div>
     </header>
-    
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
-    <i class="fa-light fa-angle-up"></i>
     <main class="main wrapper">
     {% block space %}
         <section class="">
@@ -116,16 +120,16 @@
         {% if request.user.is_staff %}
         <p>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsetext" aria-expanded="false" aria-controls="collapsetext">
-              Agregar Sucursal
+                Agregar Sucursal
             </button>
         </p>
         
         <div class="collapse" id="collapsetext">
-             <form action="" method="POST">
+            <form action="" method="POST">
                 {% csrf_token %}
                 {{form}}
                 <input type="submit" name="Guardar">
-             </form>
+            </form>
         </div>
         {% endif %}
         {% for reg in region %}
@@ -170,9 +174,7 @@
                         <td><a href="eliminarSucursal/{{met.numSucursal}}" class= "btn btn-danger">Eliminar<a/><td> 
                         {% endif %}
                     </tr>
-
-               {% endfor %}
-               
+                {% endfor %}
             {% endif %}
             </tbody>
         </table>
@@ -190,9 +192,11 @@
                     <p class="card-text">{{prod.descripEspecifica}}</p>
                     <p class="card-text2">{{prod.unidades}}</p>
                     <p class="card-text3">{{prod.desc}}</p>
+                    <p class="card-text3">({{prod.stock}} Disponibles)</p>
                 </div>
                 <div class="card-price">${{prod.price}} c/u</div>
-                <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
+                <a href="{% url 'add' prod.idProducto %}" id="btn-productos" class="btn btn-primary">Agregar</a>
+                <hr>
             </div>
             {% endfor %}
         </section>
@@ -289,10 +293,20 @@
     {% if messages %}
         {% for m in messages %}
             <script>
-                swal.fire({
-                    "title" : "Exito",
-                    "text" : "{{m}}",
-                    "icon" : "success"
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'bottom-end',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    "icon": "success",
+                    "title": "{{m}}"
                 })
             </script>  
         {% endfor %}

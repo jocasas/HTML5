@@ -11,7 +11,7 @@ class Tabla_agregar(ModelForm):
     class Meta:
         model = Producto
         #Aqui van los campos que se rellenan (los incrementales no)
-        fields = ['nombreProd','photo_as_blob','descripEspecifica','unidades','desc','price','IdTipo']
+        fields = ['nombreProd','photo_as_blob','descripEspecifica','unidades','desc','price','stock','IdTipo']
         
 class SucursalForm(ModelForm):
     class Meta:

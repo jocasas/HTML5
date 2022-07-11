@@ -30,29 +30,39 @@
                 </label>
                 <ul class="nav-menu wrapper">
                     <li><a href="{% url 'home' %}">Inicio</a></li>
-                    <li><a href="{% url 'home' %}">Categorias</a></li>
-                    <li><a href="#">Hacer Pedido</a></li>
-                    <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
-                    <li><span>Hola, {{request.user}}</span></li>
-                    <li><span><a href="{% url 'logout' %}">Logout</a></span></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="{% url 'comp' %}">Hacer Pedido</a></li>
+                    {% if request.user.is_authenticated %}
+                    {% else %}
+                        <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <li><span><a href="{% url 'his' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                        <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                    {% else %}
+                    {% endif %}
                 </ul>
             </nav>
         </div>
     </header>
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
     <main class="main wrapper">
+        {% if request.user.is_staff %}
         <div id="contenedor-agregar">
             <a href="{% url 'addProd' %}" class="btn-agregar">+ agregar productos</a>
         </div>
+        {% endif %}
         <section id="container-belleza" class="row row-cols-md-1 row-cols-md-1 g-0 wrapper">
             {% for prod in productos %}
             <div class="card h-80 bg-light">
                 <!-- put item.userId & item.id below this -->
                 <div class="card-header"></div>
+                {% if request.user.is_staff %}
                 <div class="btns-up-del">
                     <button id="btn-del" class="fa-solid fa-trash-can" href="#" onclick="deletes({{prod.idProducto}})"></button>
                     <a id="btn-mod" class="fa-solid fa-gear" href="{% url 'mod' prod.idProducto %}"></a>
                 </div>
+                {% endif %}
                 <img class="card-img-top" src="{{prod.photo_as_blob.url}}"
                     alt="Card image cap">
                 <div class="card-title">{{prod.nombreProd}}</div>
@@ -62,7 +72,7 @@
                     <p class="card-text3">{{prod.desc}}</p>
                 </div>
                 <div class="card-price">${{prod.price}} c/u</div>
-                <a href="#" id="btn-productos" class="btn btn-primary">Comprar</a>
+                <a href="{% url 'add' prod.idProducto %}" id="btn-productos" class="btn btn-primary">Agregar</a>
                 <hr>
             </div>
             {% endfor %}
@@ -134,6 +144,28 @@
     <script src="https://kit.fontawesome.com/9aec3b5dab.js" crossorigin="anonymous"></script>
     <script src="{% static 'farmacia/JS/validatciones.js' %}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+    {% for m in messages %}
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'bottom-end',
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                "icon": "success",
+                "title": "{{m}}"
+            })
+        </script>  
+    {% endfor %}
+{% endif %} 
 
 </body>
 </html>

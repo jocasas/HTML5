@@ -1,8 +1,11 @@
 from django.urls import path,include
-from.views import home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete
+from.views import Historial, add_carrito, cln_carrito, comprar, del_carrito, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+from django.urls import path, include
+from django.views.generic import TemplateView
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('',home,name="home"),
@@ -19,6 +22,16 @@ urlpatterns = [
     path('API/', include('rest_sucursales.urls')),
     path('eliminarSucursal/<codigo>',views.eliminarSucursal),
     path('editarSucursal/<str:pk>/',views.editarSucursal, name="update"),
+    path('', TemplateView.as_view(template_name="index.html")),
+    path('accounts/', include('allauth.urls')),
+    path('logout', LogoutView.as_view()),
+    path('Compra/', comp, name="comp"),
+    path('agregar/<int:producto_id>', add_carrito, name="add"),
+    path('eliminar/<int:producto_id>', del_carrito, name="del"),
+    path('restar/<int:producto_id>', rest_carrito, name="rest"),
+    path('comprar/', comprar, name="comprar"),
+    path('limpiar/', cln_carrito, name="cln"),
+    path('historial/',Historial,name="his")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

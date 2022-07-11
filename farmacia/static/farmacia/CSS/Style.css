@@ -370,6 +370,21 @@ nav {
   height: 70vh;
 }
 
+#messages_error_log{
+  color: red;
+}
+
+.errorlist li{
+  color: red;
+  margin-bottom: 0%;
+}
+
+.contenedor_error_log{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
 .contenedor_formulario {
   width: 50%;
 }
@@ -628,6 +643,12 @@ CARTAS MASCOTAS
   text-decoration: none;
   color: white;
 
+}
+
+.tabla_compras{
+  display: flex;
+  text-align: center;
+  margin-top: 5%;
 }
 
 #contenedor-agregar {
@@ -972,7 +993,23 @@ CSS Carussel
   background-color: white;
 }
 
+.google_containter .btn{
+  border-radius: 20px;
+}
+
+.google_img{
+  width: 10%;
+  margin-right: 10px;
+}
+
+.google_btn {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
  /*
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

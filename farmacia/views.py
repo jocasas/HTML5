@@ -1,14 +1,13 @@
-
 from django.shortcuts import render, redirect
+from farmacia.cart import Carrito
 
-from farmacia.decorators import allowed_user, unauthenticated_user
-from .models import Comuna,Region,Producto,Sucursal
-from .forms import Tabla_agregar,SucursalForm,sucForm,CreateUserForm
+from datetime import datetime, timedelta
+from farmacia.decorators import unauthenticated_user
+from .models import Comuna, HistorialCompras,Region,Producto,Sucursal
+from .forms import Tabla_agregar,sucForm,CreateUserForm
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login,logout 
 
-from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -30,7 +29,6 @@ def home(request):
             form = sucForm(request.POST)
             if form.is_valid():
                 form.save()
-    
     datos = {
         'productos':productos ,
         'sucursalesVal':sucursalesVal ,
@@ -82,7 +80,7 @@ def log(request):
             login(request,user)
             return redirect('home')
         else:
-            messages.info(request,'Username or password incorrect')
+            messages.info(request,'Usuario o Contraseña Incorrecta')
 
         
     context = {}    
@@ -150,6 +148,15 @@ def catmedi(request):
     
     return render (request,'farmacia/medicamentos.html',datos)
 #======================================================================================
+#VIEWS COMPRAS
+def comp(request):
+    productos = Producto.objects.all()
+    datos = {
+        'productos':productos
+    }
+    
+    return render (request,'farmacia/compras.html',datos)
+#======================================================================================
 #MODIFICAR
 def mod (request, id):
     productos = Producto.objects.get(idProducto = id)
@@ -171,7 +178,7 @@ def delete (request,id):
     messages.success(request,"eliminado correctamente")
     productos = Producto.objects.get(idProducto = id)
     productos.delete()
-    return redirect(to='home')
+    return redirect(request.META['HTTP_REFERER'])
 
 #======================================================================================
 #AGREGAR FOTO MEDIANTE FORMULARIO
@@ -190,3 +197,103 @@ def add(request):
     return render(request,'farmacia/agregarProd.html',datos)
 
 #AGREGAR SUCUR(?)
+
+#======================================================================================
+# AGREGAR A CARRITO
+def add_carrito (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.agregar(productos)
+    messages.success(request,"agregado correctamente")
+    return redirect(request.META['HTTP_REFERER'])
+
+#======================================================================================
+# ELIMINAR DE CARRITO
+
+def del_carrito (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.eliminar(productos)
+    return redirect ('comp')
+
+#======================================================================================
+# RESTAR DE CARRITO
+
+def rest_carrito (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.restar(productos)
+    return redirect ('comp')
+
+#======================================================================================
+# LIMPIAR CARRITO
+
+def cln_carrito (request):
+    carrito = Carrito(request)
+    carrito.limpiar()
+    return redirect ('comp')
+
+
+""" def comprar (request, producto_id):
+    carrito = Carrito(request)
+    productos = Producto.objects.get(idProducto = producto_id)
+    carrito.comprar(productos)
+    productos.save()
+    return redirect(to='home') """
+def restar_stock(cantidad,prod_id):
+    Productos = Producto.objects.get(idProducto = prod_id)
+    Productos.stock -= cantidad
+    Productos.save()
+
+
+''' def comprar (request):
+    carrito = Carrito(request)
+    if "carrito" in request.session.keys():
+        for key, value in request.session["carrito"].items():
+            restar_stock(int(value["cantidad"]),int(value["producto_id"]))
+            carrito.limpiar()
+    return redirect ('home')
+ '''
+
+
+def comprar (request):
+    carrito = Carrito(request)
+    producto = ''
+    valor = 0 
+    
+    if "carrito" in request.session.keys():
+        for key, value in request.session["carrito"].items():
+            restar_stock(int(value["cantidad"]),int(value["producto_id"]))
+            producto = producto + str(value["cantidad"])+ ' - ' +  value["nombre"] + ': ' + value["descripcion"] + ' , '
+            valor = valor + value["acumulado"]
+            username = request.user.username
+
+        HistorialCompras.objects.create(
+            Usuario = username,
+            Productos = producto,
+            valTotal = valor,
+            fechaCompra=datetime.today()
+        )
+
+        ''' 
+        tag= 0
+        while HistorialCompras.objects.filter(idCompra=tag).exist():   
+            HistorialCompras.objects.create(
+                idCompra = tag + 1,
+                Usuario = username,
+                Productos = producto,
+                valTotal = valor,
+                fechaCompra=datetime.datetime.now()
+            ) '''
+        
+
+    carrito.limpiar()
+    return redirect ('his')
+
+def Historial (request):
+    username = request.user.username
+    historial = HistorialCompras.objects.filter(Usuario=username)
+    context = {
+        'com':historial
+    }
+    return render(request,'farmacia/historial.html',context) 
