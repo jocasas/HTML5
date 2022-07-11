@@ -88,7 +88,9 @@
             
             {% if request.user.is_authenticated %}
             {% for compras in despacho %}
-            <h5>El estado actual de la Orden es {{compras.estado}}</h5>
+            <br>
+            </br>
+            <h5 id="statusOrd">El estado actual de la Orden es {{compras.estado}}</h5>
         
             <div class="tracking">
                 <div class="titlebar">Seguimiento Orden</div>
@@ -103,7 +105,27 @@
                 </ul>
             </div>
             {% endif %}
-            {% if compras.estado == "Entregada" %}
+            {% if compras.estado == "Cancelado" %}
+            <div class="progress-track">
+                <ul id="progressbar">
+                    <li class="step0 active " id="step1"><a>Pendiente</a></li>
+                    <li class="step0 active text-center" id="step2"><a>Cancelado</a></li>
+                    <li class="step0 text-right" id="step3"><a>En Camino</a></li>
+                    <li class="step0 text-left" id="step4"><a>Entregado</a></li>
+                </ul>
+            </div>
+            {% endif %}
+            {% if compras.estado == "En Camino" %}
+            <div class="progress-track">
+                <ul id="progressbar">
+                    <li class="step0 active " id="step1"><a>Pendiente</a></li>
+                    <li class="step0 active text-center" id="step2"><a>Cancelado</a></li>
+                    <li class="step0 active text-right" id="step3"><a>En Camino</a></li>
+                    <li class="step0 text-left" id="step4"><a>Entregado</a></li>
+                </ul>
+            </div>
+            {% endif %}
+            {% if compras.estado == "Recibido" %}
             <div class="progress-track">
                 <ul id="progressbar">
                     <li class="step0 active " id="step1"><a>Pendiente</a></li>

@@ -1172,12 +1172,28 @@ CSS Carussel
 }
 
 #visual{
+  margin-top: 5vh;
   background: rgb(255, 255, 255);
   padding-bottom: 20px;
 }
 
+#statusOrd{
+  text-align: center;
+}
+
 .titlebar{
   text-align: center;
+}
+
+
+#btnac{
+  white-space: nowrap;
+  color: rgb(35, 34, 34);
+  background-color: rgb(255, 255, 255);
+}
+
+#btnped{
+  white-space: nowrap;
 }
 /*
 

@@ -346,18 +346,18 @@ def HistorialAdmin (request):
 
 
 #======================================================================================
-# ACTUALIZANDO ESTADO DE HISTORIAL [ordenado,recibido]-> PEDIDO (?) boleta (?) nose -jose
+# ACTUALIZANDO ESTADO DE HISTORIAL POR FECHA [ordenado,recibido]-> PEDIDO (?) boleta (?) nose -jose
 # nos falta hablar del lugar donde esta supongo -jose 
-# no tengo idea si funcione
 
 def HistorialEstadoUpdate (self,nbol):
     historial = HistorialCompras.objects.get(idCompra=nbol)
-    hoy = datetime.today()
-    if hoy >= historial.fechalleg:
+    hoy = datetime.today().date()
+    fechallega = historial.fechallega
+    if hoy >= fechallega:
         historial.estado = 'Recibido'
         historial.save()
          
-    return redirect('his')
+    return redirect('hisadm')
 
 #wip no tocar 
 

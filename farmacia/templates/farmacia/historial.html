@@ -55,48 +55,67 @@
     <main class="main wrapper">
 
 
-<div class="tabla_historial col-md-12">
-    <table class="table table-light">
-        <thead class="table-dark">
-                <tr>
-                    <th>N°Compra</th>
-                    <th>Usuario</th>
-                    <th>Productos</th>
-                    <th>Total</th>
-                    <th>Fecha Compra</th>
-                    <th>Fecha Estimada</th>
-                    <th>Estado</th>
-                    <th></th>
-
-
-                </tr>
-            </thead>
-            <tbody>
-                {% if request.user.is_authenticated %}
-                {% for compras in com %}
-                <tr>
-                <td>{{compras.idCompra}}</td>
-                <td>{{compras.Usuario}}</td>
-                <td>{{compras.Productos}}</td>
-                <td>${{compras.valTotal}}</td>
-                <td>{{compras.fechaCompra}}</td>
-                <td>{{compras.fechallega}}</td>
-                    {% if compras.estado == "Pendiente"  %}
-                    <td> <span class="badge badge-pending">{{compras.estado}}<span></td>
-                    {% else %}
-                    <td> <span class="badge badge-done">{{compras.estado}}<span></td>
-                    {% endif %}
-                <td>
-                    <a href="{% url 'des' compras.idCompra%}" class="btn btn-secondary" type="button" >Ver Pedido</a>
-                </td>
-                </tr>       
-                    </div>
-                    
-                {% endfor %}
-                {% endif %}
-            </tbody>
-        </table>
-    </div> 
+        <div class="tabla_historial col-md-12 table-responsive">
+            <table class="table table-light">
+                <thead class="table-dark">
+                        <tr>
+                            <th>N°Compra</th>
+                            <th>Usuario</th>
+                            <th>Productos</th>
+                            <th>Total</th>
+                            <th>Fecha Compra</th>
+                            <th>Fecha Estimada</th>
+                            <th>Estado</th>
+                            <th></th>
+                            <th></th>
+        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if request.user.is_authenticated %}
+                        {% for compras in com %}
+                        <tr>
+                        <td>{{compras.idCompra}}</td>
+                        <td>{{compras.Usuario}}</td>
+                        <td>{{compras.Productos}}</td>
+                        <td>${{compras.valTotal}}</td>
+                        <td>{{compras.fechaCompra}}</td>
+                        <td>{{compras.fechallega}}</td>
+                            {% if compras.estado == "Pendiente"  %}
+                            <td> <span class="badge badge-pending">{{compras.estado}}<span></td>
+                            {% else %}
+                            {% endif %}
+                            {% if compras.estado == "Recibido"  %}
+                            <td> <span class="badge badge-done">{{compras.estado}}<span></td>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a id="btnped" href="{% url 'des' compras.idCompra%}" class="btn btn-secondary" type="button" >Ver Pedido</a>
+                        </td>
+                        </tr>       
+                            </div>
+                            
+                        {% endfor %}
+                        {% endif %}
+                        <thead class="table-dark">
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                    </tbody>
+                </table>
+            </div> 
+            <br>
+            </br>
+            <br>
+            </br>
+               
 </main>
 </body>
 <footer id="sticky-footer" class="bg-light text-center text-lg-start">

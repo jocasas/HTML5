@@ -66,7 +66,7 @@ class HistorialCompras (models.Model):
     Productos = models.CharField(max_length=200, verbose_name='Productos Comprados')
     valTotal = models.IntegerField(verbose_name='Valor Total')
     fechaCompra = models.DateField(verbose_name='Fecha Compra')
-    estado = models.CharField(max_length=50, verbose_name='Estado', default='Ordenado')
+    estado = models.CharField(max_length=50, verbose_name='Estado', default='Pendiente')
     fechallega = models.DateField(default=datetime.today)
     
     

@@ -37,7 +37,7 @@
                     {% endif %}
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_staff %}
-                            <li><span><a href="{% url 'hisadm' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                            <li><span><a href="{% url 'hisadm' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hisotrial, {{request.user}}</a></span></li>
                             <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
                         {% else %}
                             <li><span><a href="{% url 'his' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
@@ -53,7 +53,7 @@
     <main class="main wrapper">
 
 
-<div class="tabla_historial col-md-12">
+<div class="tabla_historial col-md-12 table-responsive">
     <table class="table table-light">
         <thead class="table-dark">
                 <tr>
@@ -65,7 +65,8 @@
                     <th>Fecha Estimada</th>
                     <th>Estado</th>
                     <th></th>
-
+                    <th></th>
+                        
                 </tr>
             </thead>
             <tbody>
@@ -85,16 +86,35 @@
                     {% endif %}
                 </td>
                 <td>
-                    <a href="{% url 'des' compras.idCompra%}" class="btn btn-secondary" type="button" >Ver Pedido</a>
+                    <a id="btnac" href="{% url 'changestate' compras.idCompra%}" class="btn btn-secondary" type="button" >Actualizar</a>
+                </td>
+                <td>
+                    <a id="btnped" href="{% url 'des' compras.idCompra%}" class="btn btn-secondary" type="button" >Ver Pedido</a>
                 </td>
                 </tr>       
                     </div>
                     
                 {% endfor %}
                 {% endif %}
+                <thead class="table-dark">
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </thead>
             </tbody>
         </table>
     </div> 
+    <br>
+    </br>
+    <br>
+    </br>
+    
 </main>
 </body>
 <footer id="sticky-footer" class="bg-light text-center text-lg-start">

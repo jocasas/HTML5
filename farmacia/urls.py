@@ -33,7 +33,7 @@ urlpatterns = [
     path('limpiar/', cln_carrito, name="cln"),
     path('historial/',Historial,name="his"),
     path('historialadm/',HistorialAdmin,name="hisadm"),
-    path('historial/',HistorialEstadoUpdate,name="changestate"),
+    path('historial/<nbol>',HistorialEstadoUpdate,name="changestate"),
     path('estadoDespacho/<idCompra>',estadoDespacho,name="des"),
 ]
 
