@@ -60,10 +60,12 @@
                     <th>N°Compra</th>
                     <th>Usuario</th>
                     <th>Productos</th>
-                    <th>Valor Total</th>
+                    <th>Total</th>
                     <th>Fecha Compra</th>
-                    <th>Dias estimados</th>
+                    <th>Fecha Estimada</th>
                     <th>Estado</th>
+                    <th></th>
+
                 </tr>
             </thead>
             <tbody>
@@ -81,6 +83,19 @@
                     {% else %}
                     <td> <span class="badge badge-done">{{compras.estado}}<span></td>
                     {% endif %}
+                <td>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Ver Pedido</button>
+                        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasBottomLabel">La Orden N°{{compras.idCompra}}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                        <div class="offcanvas-body small">
+
+                        <p>El estado actual de la Orden es {{compras.estado}}</p>
+                        </div>
+                    </div>
+                </td>
                 </tr>
                 {% endfor %}
                 {% endif %}

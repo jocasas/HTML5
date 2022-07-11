@@ -62,10 +62,13 @@
                     <th>N°Compra</th>
                     <th>Usuario</th>
                     <th>Productos</th>
-                    <th>Valor Total</th>
+                    <th>Total</th>
                     <th>Fecha Compra</th>
-                    <th>Dias estimados</th>
+                    <th>Fecha Estimada</th>
                     <th>Estado</th>
+                    <th></th>
+
+
                 </tr>
             </thead>
             <tbody>
@@ -83,7 +86,41 @@
                     {% else %}
                     <td> <span class="badge badge-done">{{compras.estado}}<span></td>
                     {% endif %}
+                <td>
+                    <button class="btn btn-secondary" type="button" >Ver Pedido</button>
+                </td>
                 </tr>
+                    <div class="">
+                            <h5>Orden numero {{compras.idCompra}}</h5>
+                            <a>El estado actual de la Orden es {{compras.estado}}</a>
+                        
+                            <div class="tracking">
+                                <div class="title">Seguimiento Orden</div>
+                            </div>
+                            {% if compras.estado == "Pendiente"  %}
+                            <div class="progress-track">
+                                <ul id="progressbar">
+                                    <li class="step0 active " id="step1"><a>Pendiente</a></li>
+                                    <li class="step0 text-center" id="step2"><a>Cancelado</a></li>
+                                    <li class="step0 text-right" id="step3"><a>En Camino</a></li>
+                                    <li class="step0 text-left" id="step4"><a>Entregado</a></li>
+                                </ul>
+                            </div>
+                            {% endif %}
+                            {% if compras.estado == "Entregada" %}
+                            <div class="progress-track">
+                                <ul id="progressbar">
+                                    <li class="step0 active " id="step1"><a>Pendiente</a></li>
+                                    <li class="step0 active text-center" id="step2"><a>Cancelado</a></li>
+                                    <li class="step0 active text-right" id="step3"><a>En Camino</a></li>
+                                    <li class="step0 active text-left" id="step4"><a>Entregado</a></li>
+                                </ul>
+                            </div>
+                            {% endif %}
+
+                        </div>
+                            
+                    </div>
                     
                 {% endfor %}
                 {% endif %}
