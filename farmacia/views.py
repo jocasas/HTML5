@@ -7,7 +7,7 @@ from .models import Comuna, HistorialCompras,Region,Producto,Sucursal
 from .forms import Tabla_agregar,sucForm,CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout 
-
+import random
 
 
 # Create your views here.
@@ -268,6 +268,10 @@ def comprar (request):
             valor = valor + value["acumulado"]
             username = request.user.username
 
+        pluseven = random.randint(1,7)
+        despa = datetime.today() + datetime.timedelta(days=pluseven)
+
+        
         HistorialCompras.objects.create(
             Usuario = username,
             Productos = producto,
@@ -275,6 +279,7 @@ def comprar (request):
             fechaCompra=datetime.today()
         )
 
+        ''' fechaDespacho= despa '''
         ''' 
         tag= 0
         while HistorialCompras.objects.filter(idCompra=tag).exist():   
