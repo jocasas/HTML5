@@ -39,9 +39,13 @@ def home(request):
     }
     return render (request,'farmacia/index.html',datos)
 
+
 def userPage(request):
     context = {}
     return render(request, 'farmacia/index2.html',context)
+
+#======================================================================================
+# MODIFICAR SUCURSAL CON MODELS Y FORMS
     
     #editar sucursal con django.forms
 def editarSucursal(request, pk):
@@ -58,13 +62,19 @@ def editarSucursal(request, pk):
     context = {'form':form}
     return render(request, 'farmacia/editarsucursal.html', context)
     
-    
+ #======================================================================================
+# ELIMINAR SUCURSAL CON MODELS
+   
     # delete
 def eliminarSucursal(request, codigo):
     numsuc = Sucursal.objects.get(numSucursal=codigo)
     numsuc.delete()
     
     return redirect('/')
+
+#======================================================================================
+# LOGIN DEF
+
 
 #login django.user token.valid
 def log(request):
@@ -86,9 +96,16 @@ def log(request):
     context = {}    
     return render (request,'farmacia/sesion2.html',context)
 
+#======================================================================================
+# DEF LOGOUT
+
+
 def logoutUser(request):
     logout(request)
     return redirect('log')
+
+#======================================================================================
+# REGISTRO USUARIOS DJANGO
 
 #registro django.forms
 @unauthenticated_user
@@ -240,6 +257,10 @@ def cln_carrito (request):
     carrito.comprar(productos)
     productos.save()
     return redirect(to='home') """
+    
+#======================================================================================
+# RESTAR STOCK INTERACCION CARRITO
+
 def restar_stock(cantidad,prod_id):
     Productos = Producto.objects.get(idProducto = prod_id)
     Productos.stock -= cantidad
@@ -254,6 +275,8 @@ def restar_stock(cantidad,prod_id):
             carrito.limpiar()
     return redirect ('home')
  '''
+#======================================================================================
+# COMPRAR --> SAVE HISTORIAL MODELS.MODEL
 
 
 def comprar (request):
@@ -268,11 +291,12 @@ def comprar (request):
             valor = valor + value["acumulado"]
             username = request.user.username
 
+        # numero al azar (suponiendo de uno a siete dias habiles) -jose
         pluseven = random.randint(1,7)
         plusfecha = datetime.today()
         despa = plusfecha + timedelta(days=pluseven)
 
-        
+                    # historial se llena con la fecha actual y la fecha actual + random(number)
         HistorialCompras.objects.create(
             Usuario = username,
             Productos = producto,
@@ -297,6 +321,10 @@ def comprar (request):
     carrito.limpiar()
     return redirect ('his')
 
+#======================================================================================
+# RENDER HISTORIAL USUARIO NORMAL
+
+
 def Historial (request):
     username = request.user.username
     historial = HistorialCompras.objects.filter(Usuario=username)
@@ -305,9 +333,47 @@ def Historial (request):
     }
     return render(request,'farmacia/historial.html',context) 
 
+#======================================================================================
+# RENDER HISTORIAL DE TODOS LOS USUARIOS PARA USUARIO STAFF
+
+
 def HistorialAdmin (request):
     historial = HistorialCompras.objects.all()
     context = {
         'com':historial
     }
     return render(request,'farmacia/historialadm.html',context)
+
+
+#======================================================================================
+# ACTUALIZANDO ESTADO DE HISTORIAL [ordenado,recibido]-> PEDIDO (?) boleta (?) nose -jose
+# nos falta hablar del lugar donde esta supongo -jose 
+# no tengo idea si funcione
+
+def HistorialEstadoUpdate (self,nbol):
+    historial = HistorialCompras.objects.get(idCompra=nbol)
+    hoy = datetime.today()
+    if hoy >= historial.fechalleg:
+        historial.estado = 'Recibido'
+        historial.save()
+         
+    return redirect('his')
+
+#wip no tocar 
+
+#======================================================================================
+# a no se -jose
+# if apreta un boton ?
+def editarEstadoManual(request, pk):
+    
+    histo = HistorialCompras.objects.get(idCompra=pk)
+    form = HistorialCompras(instance=histo)
+    
+    if request.method == 'POST':
+        form = sucForm(request.POST, instance=histo)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+            
+    context = {'form':form}
+    return render(request, 'farmacia/', context)

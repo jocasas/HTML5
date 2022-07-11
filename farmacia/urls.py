@@ -1,5 +1,5 @@
 from django.urls import path,include
-from.views import Historial,HistorialAdmin, add_carrito, cln_carrito, comprar, del_carrito, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
+from.views import Historial,HistorialAdmin,HistorialEstadoUpdate, add_carrito, cln_carrito, comprar, del_carrito, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -32,7 +32,8 @@ urlpatterns = [
     path('comprar/', comprar, name="comprar"),
     path('limpiar/', cln_carrito, name="cln"),
     path('historial/',Historial,name="his"),
-    path('historialadm/',HistorialAdmin,name="hisadm")
+    path('historialadm/',HistorialAdmin,name="hisadm"),
+    path('historial/',HistorialEstadoUpdate,name="changestate"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
