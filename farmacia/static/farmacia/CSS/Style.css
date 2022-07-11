@@ -1171,7 +1171,15 @@ CSS Carussel
     background: rgb(252, 103, 49);
 }
 
- /*
+#visual{
+  background: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+
+.titlebar{
+  text-align: center;
+}
+/*
 
 
 

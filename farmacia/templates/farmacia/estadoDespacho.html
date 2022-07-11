@@ -54,51 +54,70 @@
     <a href="#"><button onclick="topFunction()" id="myBtn" title="Subir" class="fa-solid fa-angle-up"></button></a>
     <main class="main wrapper">
 
+        <div class="tabla_historial col-md-12">
+            <table class="table table-light">
+                <thead class="table-dark">
+                        <tr>
+                            <th>N°Compra</th>
+                            <th>Productos</th>
+                            <th>Total</th>
+                            <th>Fecha Compra</th>
+                            <th>Fecha Estimada</th>
+                            
+        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if request.user.is_authenticated %}
+                        {% for compras in despacho %}
+                        <tr>
+                        <td>{{compras.idCompra}}</td>
+                        <td>{{compras.Productos}}</td>
+                        <td>${{compras.valTotal}}</td>
+                        <td>{{compras.fechaCompra}}</td>
+                        <td>{{compras.fechallega}}</td>
+                        </tr>
+                        
+                        {% endfor %}
+                        {% endif %}
+                    </tbody>
+            </table>
+        </div> 
 
-<div class="tabla_historial col-md-12">
-    <table class="table table-light">
-        <thead class="table-dark">
-                <tr>
-                    <th>N°Compra</th>
-                    <th>Usuario</th>
-                    <th>Productos</th>
-                    <th>Total</th>
-                    <th>Fecha Compra</th>
-                    <th>Fecha Estimada</th>
-                    <th>Estado</th>
-                    <th></th>
-
-
-                </tr>
-            </thead>
-            <tbody>
-                {% if request.user.is_authenticated %}
-                {% for compras in com %}
-                <tr>
-                <td>{{compras.idCompra}}</td>
-                <td>{{compras.Usuario}}</td>
-                <td>{{compras.Productos}}</td>
-                <td>${{compras.valTotal}}</td>
-                <td>{{compras.fechaCompra}}</td>
-                <td>{{compras.fechallega}}</td>
-                    {% if compras.estado == "Pendiente"  %}
-                    <td> <span class="badge badge-pending">{{compras.estado}}<span></td>
-                    {% else %}
-                    <td> <span class="badge badge-done">{{compras.estado}}<span></td>
-                    {% endif %}
-                <td>
-                    <a href="{% url 'des' compras.idCompra%}" class="btn btn-secondary" type="button" >Ver Pedido</a>
-                </td>
-                </tr>       
-                    </div>
-                    
-                {% endfor %}
-                {% endif %}
-            </tbody>
-        </table>
-    </div> 
-</main>
-</body>
+        <div class="" id="visual">
+            
+            {% if request.user.is_authenticated %}
+            {% for compras in despacho %}
+            <h5>El estado actual de la Orden es {{compras.estado}}</h5>
+        
+            <div class="tracking">
+                <div class="titlebar">Seguimiento Orden</div>
+            </div>
+            {% if compras.estado == "Pendiente"  %}
+            <div class="progress-track">
+                <ul id="progressbar">
+                    <li class="step0 active " id="step1"><a>Pendiente</a></li>
+                    <li class="step0 text-center" id="step2"><a>Cancelado</a></li>
+                    <li class="step0 text-right" id="step3"><a>En Camino</a></li>
+                    <li class="step0 text-left" id="step4"><a>Entregado</a></li>
+                </ul>
+            </div>
+            {% endif %}
+            {% if compras.estado == "Entregada" %}
+            <div class="progress-track">
+                <ul id="progressbar">
+                    <li class="step0 active " id="step1"><a>Pendiente</a></li>
+                    <li class="step0 active text-center" id="step2"><a>Cancelado</a></li>
+                    <li class="step0 active text-right" id="step3"><a>En Camino</a></li>
+                    <li class="step0 active text-left" id="step4"><a>Entregado</a></li>
+                </ul>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>    
+    </main>
+    </body>
 <footer id="sticky-footer" class="bg-light text-center text-lg-start">
     <div class="fotersito">
         <div class="fotercol1"> 

@@ -378,3 +378,7 @@ def editarEstadoManual(request, pk):
     context = {'form':form}
     return render(request, 'farmacia/', context)
 
+def estadoDespacho(request,idCompra):
+    despacho = HistorialCompras.objects.filter(idCompra=idCompra)
+    datos= {'despacho':despacho}
+    return render(request,'farmacia/estadoDespacho.html',datos)
