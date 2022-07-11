@@ -304,3 +304,10 @@ def Historial (request):
         'com':historial
     }
     return render(request,'farmacia/historial.html',context) 
+
+def HistorialAdmin (request):
+    historial = HistorialCompras.objects.all()
+    context = {
+        'com':historial
+    }
+    return render(request,'farmacia/historialadm.html',context)
