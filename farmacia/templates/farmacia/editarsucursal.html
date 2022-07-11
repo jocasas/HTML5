@@ -32,11 +32,18 @@
                     {% else %}
                         <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
                     {% endif %}
+                    {% block admin %}
                     {% if request.user.is_authenticated %}
-                        <li><span><a><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
-                        <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                        {% if request.user.is_staff %}
+                            <li><span><a href="{% url 'hisadm' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Historial, {{request.user}}</a></span></li>
+                            <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                        {% else %}
+                            <li><span><a href="{% url 'his' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                            <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                        {% endif %}
                     {% else %}
                     {% endif %}
+                    {% endblock admin %}
                 </ul>
             </nav>
         </div>
@@ -72,6 +79,25 @@
     <script src="{% static 'farmacia/JS/validatciones.js' %}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+<footer id="sticky-footer" class="bg-light text-center text-lg-start">
+    <div class="fotersito">
+        <div class="fotercol1"> 
+            <p>Av Siempre Viva, N°304.</p>
+        </div>
+        <div class="foter-red">
+            <p>Redes Sociales</p>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+        <div class="fotercol2">
+            <p>+56 9 8456 4232</p>
+        </div>
+        <div class="fotercol3">
+            <p>Derechos reservados®</p>
+        </div>
+    </div>
+</footer>
 </html>
 
 

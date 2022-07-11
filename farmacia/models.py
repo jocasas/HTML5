@@ -1,4 +1,6 @@
+from tabnanny import verbose
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 
@@ -57,3 +59,16 @@ class Sucursal (models.Model):
     def __str__(self):
         return self.Nombre
     
+class HistorialCompras (models.Model):
+    
+    idCompra = models.AutoField(primary_key=True,verbose_name='Codigo Compra')
+    Usuario = models.CharField(max_length=200, verbose_name='Usuario')
+    Productos = models.CharField(max_length=200, verbose_name='Productos Comprados')
+    valTotal = models.IntegerField(verbose_name='Valor Total')
+    fechaCompra = models.DateField(verbose_name='Fecha Compra')
+    estado = models.CharField(max_length=50, verbose_name='Estado', default='Pendiente')
+    fechallega = models.DateField(default=datetime.today)
+    
+    
+    def __str__(self):
+        return self.Usuario

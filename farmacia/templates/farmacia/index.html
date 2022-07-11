@@ -35,11 +35,18 @@
                     {% else %}
                         <li><a href="{% url 'log' %}">Iniciar Sesion</a></li>
                     {% endif %}
+                    {% block admin %}
                     {% if request.user.is_authenticated %}
-                        <li><span><a><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
-                        <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                        {% if request.user.is_staff %}
+                            <li><span><a href="{% url 'hisadm' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Historial, {{request.user}}</a></span></li>
+                            <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                        {% else %}
+                            <li><span><a href="{% url 'his' %}"><img src="{% static 'farmacia/img/klipartz.com.png'%}" width="30px">Hola, {{request.user}}</a></span></li>
+                            <li><span><a href="{% url 'logout' %}">Cerrar Sesion</a></span></li>
+                        {% endif %}
                     {% else %}
                     {% endif %}
+                    {% endblock admin %}
                 </ul>
             </nav>
         </div>
@@ -134,7 +141,7 @@
         {% endif %}
         {% for reg in region %}
         <table class="table table-hover" id="tablasuc">
-            <thead> 
+            <thead id="tablasuc-head"> 
                 <br>
                 <h4>{{reg.nomRegion}}</h4>
                 <tr>
@@ -142,6 +149,12 @@
                     <th class="col">Direccion Sucursal</th>
                     <th class="col">Comuna</th>
                     <th class="col">Hora de atencion</th>
+                    {% if request.user.is_staff %}
+                    <th class="col"> </th>
+                    <th class="col"> </th>
+                    <th class="col"> </th>
+                    <th class="col"> </th>
+                    {% endif %}
                 </tr>
             </thead>
             <tbody>

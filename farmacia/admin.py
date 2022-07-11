@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TipoProducto, Producto, Region, Comuna, Sucursal
+from .models import TipoProducto, Producto, Region, Comuna, Sucursal,HistorialCompras
 from django.utils.html import format_html
 
 # Register your models here.
@@ -26,3 +26,4 @@ admin.site.register(Producto, PersonAdmin)
 admin.site.register(Region)
 admin.site.register(Comuna)
 admin.site.register(Sucursal)
+admin.site.register(HistorialCompras)
