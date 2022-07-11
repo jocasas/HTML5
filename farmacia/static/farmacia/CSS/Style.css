@@ -34,7 +34,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -129,6 +129,22 @@ nav {
   border-radius: 300px;
 }
 
+#tablasuc{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+#tablasuc-head{
+  background-color: #2db9cb;
+  color: #000000;
+  text-align: left;
+}
+
+
+
 /* 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -140,6 +156,12 @@ nav {
 */
 
 /*CSS FOOTER*/
+
+#sticky-footer{
+  position: sticky;
+  top: 100%;
+}
+
 .fotercol1{
   text-align: center;
   margin-bottom: 5px;
@@ -651,6 +673,12 @@ CARTAS MASCOTAS
   margin-top: 5%;
 }
 
+.tabla-historial{
+  display: flex;
+  text-align: center;
+  margin-top: 5%;
+}
+
 #contenedor-agregar {
   display: flex;
   width:fit-content;
@@ -1009,14 +1037,21 @@ CSS Carussel
 
 /* css historial */
 
-.badge-succes{
-  background-color: red;
+.badge-pending{
+  background-color: rgb(219, 21, 21);
   color: white;
   padding: 4px 8px;
   text-align: center;
   border-radius: 5px;
 }
 
+.badge-done{
+  background-color: rgb(78, 214, 24);
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
  /*
 
 

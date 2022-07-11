@@ -377,3 +377,4 @@ def editarEstadoManual(request, pk):
             
     context = {'form':form}
     return render(request, 'farmacia/', context)
+

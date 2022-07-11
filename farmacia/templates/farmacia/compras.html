@@ -52,14 +52,14 @@
 <main class="main wrapper">
     <div class="tabla_compras col-md-12">
         <table class="table table-light">
-            <thead class="table-dark">
+            <thead id="comhead" class="table-dark">
                 <tr>
                     <th></th>
-                    <th>nombre</th>
-                    <th>descripcion</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
                     <th>Precio</th>
-                    <th>SubTotal</th>
-                    <th>cantidad</th>
+                    <th>Sub Total</th>
+                    <th>Cantidad</th>
                 </tr>
             </thead>
             <tbody>
@@ -96,8 +96,8 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th scope="row">total:</th>
-                        <th scope="row">descuento</th>
+                        <th scope="row">Total:</th>
+                        <th scope="row">Descuento</th>
                         
                     </tr>
                 </thead>
@@ -164,4 +164,23 @@
         {% endfor %}
     {% endif %} 
 </body>
+<footer id="sticky-footer" class="bg-light text-center text-lg-start">
+    <div class="fotersito">
+        <div class="fotercol1"> 
+            <p>Av Siempre Viva, N°304.</p>
+        </div>
+        <div class="foter-red">
+            <p>Redes Sociales</p>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+        <div class="fotercol2">
+            <p>+56 9 8456 4232</p>
+        </div>
+        <div class="fotercol3">
+            <p>Derechos reservados®</p>
+        </div>
+    </div>
+</footer>
 </html>
