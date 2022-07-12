@@ -208,7 +208,11 @@
                     <p class="card-text3">({{prod.stock}} Disponibles)</p>
                 </div>
                 <div class="card-price">${{prod.price}} c/u</div>
+                {% if request.user.is_authenticated %}
                 <a href="{% url 'add' prod.idProducto %}" id="btn-productos" class="btn btn-primary">Agregar</a>
+                {% else %}
+                <a href="{% url 'log' %}" id="btn-productos" class="btn btn-primary">Agregar</a>
+                {% endif %}
                 <hr>
             </div>
             {% endfor %}
