@@ -1175,6 +1175,7 @@ CSS Carussel
   margin-top: 5vh;
   background: rgb(255, 255, 255);
   padding-bottom: 20px;
+  border: 5px solid #000;
 }
 
 #statusOrd{
@@ -1194,6 +1195,14 @@ CSS Carussel
 
 #btnped{
   white-space: nowrap;
+}
+
+#state{
+  background-color: rgb(234, 121, 55);
+}
+
+#estadoschange{
+  text-align: center;
 }
 /*
 

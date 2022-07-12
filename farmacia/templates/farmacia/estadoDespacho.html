@@ -135,6 +135,15 @@
                 </ul>
             </div>
             {% endif %}
+            <div id="estadoschange">
+                {% for compras in despacho %}
+                <h5>Cambiar estado</h5>
+                    <a href= "{% url 'pendiente' compras.idCompra%}" id='state' class="btn btn-secondary">Pendiente</a>
+                    <a href= "{% url 'cancelado' compras.idCompra%}" id='state' class="btn btn-secondary">Cancelado</a>
+                    <a href= "{% url 'encamino' compras.idCompra%}" id='state' class="btn btn-secondary">En Camino</a>
+                    <a href= "{% url 'recibido' compras.idCompra%}" id='state' class="btn btn-secondary">Recibido</a>
+            </div>
+                {% endfor %}
             {% endfor %}
             {% endif %}
         </div>    

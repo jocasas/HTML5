@@ -364,21 +364,52 @@ def HistorialEstadoUpdate (self,nbol):
 #======================================================================================
 # a no se -jose
 # if apreta un boton ?
-def editarEstadoManual(request, pk):
-    
-    histo = HistorialCompras.objects.get(idCompra=pk)
-    form = HistorialCompras(instance=histo)
-    
-    if request.method == 'POST':
-        form = sucForm(request.POST, instance=histo)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-            
-    context = {'form':form}
-    return render(request, 'farmacia/', context)
 
 def estadoDespacho(request,idCompra):
     despacho = HistorialCompras.objects.filter(idCompra=idCompra)
     datos= {'despacho':despacho}
     return render(request,'farmacia/estadoDespacho.html',datos)
+
+
+#======================================================================================
+# Editar Estado
+# Pendiente
+def editarEstadoManual1(self, nbol):
+    
+    histo = HistorialCompras.objects.get(idCompra=nbol)
+    print('Estado Anterior: '+ histo.estado)
+    histo.estado = 'Pendiente'
+    print('Estado Nuevo:' + histo.estado)
+    histo.save()
+    
+    return redirect('des')
+           
+# Cancelado 
+def editarEstadoManual2(self, nbol):
+    
+    histo = HistorialCompras.objects.get(idCompra=nbol)
+    print('Estado Anterior: '+ histo.estado)
+    histo.estado = 'Cancelado'
+    print('Estado Nuevo:' + histo.estado)
+    histo.save()
+    
+    return redirect('des')
+
+# En camino 
+def editarEstadoManual3(self, nbol):
+    
+    histo = HistorialCompras.objects.get(idCompra=nbol)
+    histo.estado = 'En Camino'
+    histo.save()
+    
+    return redirect('des')
+
+# Recibido 
+def editarEstadoManual4(self, nbol):
+    
+    histo = HistorialCompras.objects.get(idCompra=nbol)
+    histo.estado = 'Recibido'
+    histo.save()
+    
+    return redirect('des')
+            
