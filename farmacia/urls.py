@@ -1,5 +1,5 @@
 from django.urls import path,include
-from.views import Historial,HistorialAdmin,HistorialEstadoUpdate, add_carrito, cln_carrito, comprar, del_carrito, estadoDespacho, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
+from.views import Historial,HistorialAdmin,HistorialEstadoUpdate, add_carrito, cln_carrito, comprar, del_carrito, editarEstadoManual1,editarEstadoManual2,editarEstadoManual3,editarEstadoManual4, estadoDespacho, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -35,6 +35,10 @@ urlpatterns = [
     path('historialadm/',HistorialAdmin,name="hisadm"),
     path('historial/<nbol>',HistorialEstadoUpdate,name="changestate"),
     path('estadoDespacho/<idCompra>',estadoDespacho,name="des"),
+    path('hpstproaladm/<nbol>',editarEstadoManual1,name="pendiente"),
+    path('hcstproaladm/<nbol>',editarEstadoManual2,name="cancelado"),
+    path('hestproaladm/<nbol>',editarEstadoManual3,name="encamino"),
+    path('hrstproaladm/<nbol>',editarEstadoManual4,name="recibido"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

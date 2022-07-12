@@ -85,8 +85,19 @@
                             <td> <span class="badge badge-pending">{{compras.estado}}<span></td>
                             {% else %}
                             {% endif %}
+                            
+                            {% if compras.estado == "Cancelado"  %}
+                            <td> <span class="badge badge-cancel">{{compras.estado}}<span></td>
+                            {% else %}
+                            {% endif %}
+                            {% if compras.estado == "En Camino"  %}
+                            <td> <span class="badge badge-way">{{compras.estado}}<span></td>
+                            {% else %}
+                            {% endif %}
+
                             {% if compras.estado == "Recibido"  %}
                             <td> <span class="badge badge-done">{{compras.estado}}<span></td>
+                            {% else %}
                             {% endif %}
                         </td>
                         <td>

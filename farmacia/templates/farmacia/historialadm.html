@@ -73,16 +73,29 @@
                 {% if request.user.is_authenticated %}
                 {% for compras in com %}
                 <tr>
-                <td>{{compras.idCompra}}</td>
-                <td>{{compras.Usuario}}</td>
-                <td>{{compras.Productos}}</td>
-                <td>${{compras.valTotal}}</td>
-                <td>{{compras.fechaCompra}}</td>
-                <td>{{compras.fechallega}}</td>
+                <td id="">{{compras.idCompra}}</td>
+                <td id="">{{compras.Usuario}}</td>
+                <td id="">{{compras.Productos}}</td>
+                <td id="">${{compras.valTotal}}</td>
+                <td id="tede">{{compras.fechaCompra}}</td>
+                <td id="tede">{{compras.fechallega}}</td>
                     {% if compras.estado == "Pendiente"  %}
                     <td> <span class="badge badge-pending">{{compras.estado}}<span></td>
                     {% else %}
+                    {% endif %}
+                    
+                    {% if compras.estado == "Cancelado"  %}
+                    <td> <span class="badge badge-cancel">{{compras.estado}}<span></td>
+                    {% else %}
+                    {% endif %}
+                    {% if compras.estado == "En Camino"  %}
+                    <td> <span class="badge badge-way">{{compras.estado}}<span></td>
+                    {% else %}
+                    {% endif %}
+
+                    {% if compras.estado == "Recibido"  %}
                     <td> <span class="badge badge-done">{{compras.estado}}<span></td>
+                    {% else %}
                     {% endif %}
                 </td>
                 <td>
@@ -91,6 +104,33 @@
                 <td>
                     <a id="btnped" href="{% url 'des' compras.idCompra%}" class="btn btn-secondary" type="button" >Ver Pedido</a>
                 </td>
+{% comment %}                 <tr>
+                    <td id="blackbar">
+                    </td>
+                    <td id="blackbar">
+                    </td>
+                    <td id="blackbar">
+                    </td>
+                    <td id="blackbar">
+                    </td>
+                    <td id="estadohis">
+                        <div id="estadoschange">
+                            <h5></h5>
+                        </div>
+                    </td>
+                    <td id="blackbar">
+                        <a href= "{% url 'pendiente' compras.idCompra%}" id='state' class="btn btn-secondary">Pendiente</a>
+                    </td>
+                    <td id="blackbar">
+                        <a href= "{% url 'cancelado' compras.idCompra%}" id='state' class="btn btn-secondary">Cancelado</a>
+                    </td>
+                    <td id="blackbar">
+                        <a href= "{% url 'encamino' compras.idCompra%}" id='state' class="btn btn-secondary">En Camino</a>
+                    </td>
+                    <td id="blackbar">
+                        <a href= "{% url 'recibido' compras.idCompra%}" id='state' class="btn btn-secondary">Recibido</a>
+                    </td>
+                </tr> {% endcomment %}
                 </tr>       
                     </div>
                     

@@ -1018,7 +1018,7 @@ CSS Carussel
 
 /* CSS tablita sucursales en el index*/
 #tablasuc{
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .google_containter .btn{
@@ -1031,14 +1031,30 @@ CSS Carussel
 }
 
 .google_btn {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   text-decoration: none;
 }
 
 /* css historial */
 
 .badge-pending{
-  background-color: rgb(219, 21, 21);
+  background-color: #db1515;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badge-cancel{
+  background-color: #efb239;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.badge-way{
+  background-color: #8fdb4c;
   color: white;
   padding: 4px 8px;
   text-align: center;
@@ -1046,7 +1062,7 @@ CSS Carussel
 }
 
 .badge-done{
-  background-color: rgb(78, 214, 24);
+  background-color: #4ed618;
   color: white;
   padding: 4px 8px;
   text-align: center;
@@ -1175,6 +1191,7 @@ CSS Carussel
   margin-top: 5vh;
   background: rgb(255, 255, 255);
   padding-bottom: 20px;
+  border: 5px solid #000;
 }
 
 #statusOrd{
@@ -1194,6 +1211,30 @@ CSS Carussel
 
 #btnped{
   white-space: nowrap;
+}
+
+#state{
+  background-color: rgb(234, 121, 55);
+  white-space: nowrap;
+}
+
+#tede{
+  font-weight: bold;
+  
+}
+
+#blackbar{
+  background-color: #161a1e;
+}
+
+#estadoschange{
+  text-align: center;
+  white-space: nowrap;
+}
+
+#estadohis{
+  background-color: #161a1e;
+  color: white;
 }
 /*
 
