@@ -1,3 +1,4 @@
+from msilib.schema import Icon
 from django.shortcuts import render, redirect
 from farmacia.cart import Carrito
 
@@ -62,9 +63,9 @@ def editarSucursal(request, pk):
     context = {'form':form}
     return render(request, 'farmacia/editarsucursal.html', context)
     
- #======================================================================================
+#======================================================================================
 # ELIMINAR SUCURSAL CON MODELS
-   
+
     # delete
 def eliminarSucursal(request, codigo):
     numsuc = Sucursal.objects.get(numSucursal=codigo)
@@ -220,9 +221,13 @@ def add(request):
 def add_carrito (request, producto_id):
     carrito = Carrito(request)
     productos = Producto.objects.get(idProducto = producto_id)
-    carrito.agregar(productos)
-    messages.success(request,"agregado correctamente")
-    return redirect(request.META['HTTP_REFERER'])
+    if productos.stock <= 0:
+        messages.info(request,"Producto agotado")
+        return redirect (request.META['HTTP_REFERER'])
+    else:
+        carrito.agregar(productos)
+        messages.success(request,"agregado correctamente")
+        return redirect(request.META['HTTP_REFERER'])
 
 #======================================================================================
 # ELIMINAR DE CARRITO
