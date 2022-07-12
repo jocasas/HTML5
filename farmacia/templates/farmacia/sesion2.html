@@ -18,13 +18,13 @@
     <section>
         <div class="contenedor_login">
             <div class="contenedor_contenido">
-              <!--formulario -->
+            <!--formulario -->
                 <div id="regresar_login">
                     <a class= "fa fa-arrow-left" href="{% url 'home' %}" aria-hidden="true" role="button"></a>
                 </div>
                 <div class="contenedor_formulario">
-                  <h2>Iniciar Sesion</h2>
-                      <form method="POST" id="form_login">
+                    <h2>Iniciar Sesion</h2>
+                    <form method="POST" id="form_login">
                         {% csrf_token %}
                             <div class="input">
                                 <span>Usuario:</span>
@@ -47,7 +47,10 @@
                             </div>
                             
                             {% for message in messages %}
-                                <p id="messages">{{message}}</p>
+                            <div class="contenedor_error_log">
+                                <p id="messages_error_log">{{message}}</p>
+                            </div>
+
                             {% endfor %}
                             
                             <div class="registrarme_login">
@@ -62,10 +65,10 @@
                                 <a class="btn btn-outline-primary" href="{% provider_login_url 'google' %}" ><img class="google_img" src="{% static 'farmacia/img/googlepng.png'%}">Login With Google</a>
                             </div>
 
-                            {% endif %}
-                      </form>
+                        {% endif %}
+                    </form>
                 </div>
-              <!-- fin formulario -->
+            <!-- fin formulario -->
             </div>
             <div class="contenedor_img">
                 <img src="{% static 'farmacia/img/farmaceutico-login.jpg'%}" alt="">

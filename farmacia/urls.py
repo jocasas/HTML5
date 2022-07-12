@@ -1,5 +1,5 @@
 from django.urls import path,include
-from.views import home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete
+from.views import Historial,HistorialAdmin,HistorialEstadoUpdate, add_carrito, cln_carrito, comprar, del_carrito, editarEstadoManual1,editarEstadoManual2,editarEstadoManual3,editarEstadoManual4, estadoDespacho, home,log,reg,catbell,catmasc,catmedi,catsexu,add,mod,delete,comp, rest_carrito
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -25,6 +25,20 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name="index.html")),
     path('accounts/', include('allauth.urls')),
     path('logout', LogoutView.as_view()),
+    path('Compra/', comp, name="comp"),
+    path('agregar/<int:producto_id>', add_carrito, name="add"),
+    path('eliminar/<int:producto_id>', del_carrito, name="del"),
+    path('restar/<int:producto_id>', rest_carrito, name="rest"),
+    path('comprar/', comprar, name="comprar"),
+    path('limpiar/', cln_carrito, name="cln"),
+    path('historial/',Historial,name="his"),
+    path('historialadm/',HistorialAdmin,name="hisadm"),
+    path('historial/<nbol>',HistorialEstadoUpdate,name="changestate"),
+    path('estadoDespacho/<idCompra>',estadoDespacho,name="des"),
+    path('hpstproaladm/<nbol>',editarEstadoManual1,name="pendiente"),
+    path('hcstproaladm/<nbol>',editarEstadoManual2,name="cancelado"),
+    path('hestproaladm/<nbol>',editarEstadoManual3,name="encamino"),
+    path('hrstproaladm/<nbol>',editarEstadoManual4,name="recibido"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
