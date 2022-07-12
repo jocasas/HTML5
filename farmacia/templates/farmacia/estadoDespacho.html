@@ -136,7 +136,9 @@
             </div>
             {% endif %}
             <div id="estadoschange">
-            {% for compras in despacho %}
+                {% if request.user.is_staff %}
+                {% for compras in despacho %}
+            
             <h5>Cambiar estado</h5>
                 <a href= "{% url 'pendiente' compras.idCompra%}" id='state' class="btn btn-secondary">Pendiente</a>
                 <a href= "{% url 'cancelado' compras.idCompra%}" id='state' class="btn btn-secondary">Cancelado</a>
@@ -144,6 +146,7 @@
                 <a href= "{% url 'recibido' compras.idCompra%}" id='state' class="btn btn-secondary">Recibido</a>
             </div>
                 {% endfor %}
+                {% endif %}
             {% endfor %}
             {% endif %}
         </div>    
