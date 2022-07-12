@@ -35,10 +35,10 @@ urlpatterns = [
     path('historialadm/',HistorialAdmin,name="hisadm"),
     path('historial/<nbol>',HistorialEstadoUpdate,name="changestate"),
     path('estadoDespacho/<idCompra>',estadoDespacho,name="des"),
-    path('estadoDespacho/<nbol>',editarEstadoManual1,name="pendiente"),
-    path('estadoDespacho/<nbol>',editarEstadoManual2,name="cancelado"),
-    path('estadoDespacho/<nbol>',editarEstadoManual3,name="encamino"),
-    path('estadoDespacho/<nbol>',editarEstadoManual4,name="recibido"),
+    path('hpstproaladm/<nbol>',editarEstadoManual1,name="pendiente"),
+    path('hcstproaladm/<nbol>',editarEstadoManual2,name="cancelado"),
+    path('hestproaladm/<nbol>',editarEstadoManual3,name="encamino"),
+    path('hrstproaladm/<nbol>',editarEstadoManual4,name="recibido"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

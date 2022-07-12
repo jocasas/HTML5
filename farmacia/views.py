@@ -382,7 +382,7 @@ def editarEstadoManual1(self, nbol):
     print('Estado Nuevo:' + histo.estado)
     histo.save()
     
-    return redirect('des')
+    return redirect('hisadm')
            
 # Cancelado 
 def editarEstadoManual2(self, nbol):
@@ -393,7 +393,7 @@ def editarEstadoManual2(self, nbol):
     print('Estado Nuevo:' + histo.estado)
     histo.save()
     
-    return redirect('des')
+    return redirect('hisadm')
 
 # En camino 
 def editarEstadoManual3(self, nbol):
@@ -402,7 +402,7 @@ def editarEstadoManual3(self, nbol):
     histo.estado = 'En Camino'
     histo.save()
     
-    return redirect('des')
+    return redirect('hisadm')
 
 # Recibido 
 def editarEstadoManual4(self, nbol):
@@ -411,5 +411,5 @@ def editarEstadoManual4(self, nbol):
     histo.estado = 'Recibido'
     histo.save()
     
-    return redirect('des')
+    return redirect('hisadm')
             

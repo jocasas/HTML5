@@ -1199,10 +1199,26 @@ CSS Carussel
 
 #state{
   background-color: rgb(234, 121, 55);
+  white-space: nowrap;
+}
+
+#tede{
+  font-weight: bold;
+  
+}
+
+#blackbar{
+  background-color: #161a1e;
 }
 
 #estadoschange{
   text-align: center;
+  white-space: nowrap;
+}
+
+#estadohis{
+  background-color: #161a1e;
+  color: white;
 }
 /*
 
